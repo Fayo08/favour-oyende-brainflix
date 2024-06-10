@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("../Assets/Font/Alternative files/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next LT Bold";
+  src: url(".../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype"), url("../Assets/Font/Alternative files/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next LT Demi";
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.otf.otf") format("opentype"), url("../Assets/Font/Alternative files/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.video {
+  list-style: none;
+  margin: 0;
+}
+.video__thumbnail {
+  width: 100px;
+  height: 100px;
+}/*# sourceMappingURL=VideoItem.css.map */

@@ -1,0 +1,14 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+
+.article{
+
+    
+
+    &__list{
+        margin: 0;
+        padding: 0;
+    }
+}

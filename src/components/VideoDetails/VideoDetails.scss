@@ -1,0 +1,112 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+
+
+.mainvideo{
+
+
+   
+    
+&__player{
+    width: 100%;
+    aspect-ratio: 16/9;
+
+    &--container{
+        position: relative;
+        display: flex;
+    justify-content: center;
+    }
+
+    &--controlContainer{
+        display: flex;
+        justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 7rem;
+    gap: .5rem;
+        
+    }
+
+    &--controls{
+        background-color: $BandSite-Darkblack-overlay ;
+        width: fit-content;
+        display: flex;
+        padding: 6px;
+        border-radius: $border-radius;
+        
+
+        &--scrub{
+            background-color: $BandSite-Darkblack-overlay ;
+            align-items: center;
+            display: flex;
+            height: 30px;
+            padding-left: 6px;
+            padding-right: 6px;
+            border-radius: $border-radius;
+            
+        }
+
+        &--scrubline{
+            height: 1px;
+            background-color: $BrainFlix-black ;
+            width: 110px;
+            display: inline-block;
+        }
+    }
+}
+
+&__timestamp{
+    color: $Silver;
+}
+
+&__content{
+    display: flex;
+    border-top: 1px solid $Mercury;
+    border-bottom: 1px solid $Mercury;
+    gap: $Padding-between-components-m;
+
+
+
+    &--info{
+    color: $Silver;
+    }
+}
+
+}
+
+.articles{
+display: flex;
+
+    &__avatar{
+        width: 36px;
+            height: 36px;
+            border-radius: 50%; 
+    }
+    
+    &__comment{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__button{
+        width: 100%;
+        color: white;
+        background-color: #0095FF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        height: 40px;
+        border-radius: 4px;
+    }
+
+
+
+}
+
+
+
+
+
