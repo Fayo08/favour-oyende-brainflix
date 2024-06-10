@@ -16,10 +16,34 @@
   font-weight: normal;
   font-style: normal;
 }
-.article__subheader {
-  color: #AFAFAF;
+.comment {
+  display: flex;
+  gap: 36px;
+  border-bottom: 1px solid #E1E1E1;
+  margin-top: 16px;
 }
-.article__list {
+.comment__placeholderImg {
+  border-radius: 50%;
+  background-color: #E1E1E1;
+  width: 2.25rem;
+  height: 2.25rem;
+}
+.comment__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+}
+.comment__info--details {
+  display: flex;
+  align-self: flex-start;
+  gap: 24px;
+}
+.comment__title {
   margin: 0;
-  padding: 0;
-}/*# sourceMappingURL=VideoContainer.css.map */
+}
+.comment__date {
+  color: #AFAFAF;
+  margin: 0;
+}/*# sourceMappingURL=CommentItem.css.map */

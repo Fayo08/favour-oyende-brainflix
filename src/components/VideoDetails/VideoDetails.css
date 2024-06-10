@@ -1,0 +1,108 @@
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/Font/Alternative files/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next LT Bold";
+  src: url(".../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype"), url("../../assets/Font/Alternative files/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next LT Demi";
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.otf.otf") format("opentype"), url("../../assets/Font/Alternative files/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.mainvideo {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.mainvideo__player {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.mainvideo__player--container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.mainvideo__player--controlContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 7rem;
+  gap: 0.5rem;
+}
+.mainvideo__player--controls {
+  background-color: rgba(50, 50, 50, 0.5);
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  padding: 6px;
+  border-radius: 4px;
+}
+.mainvideo__player--controls--scrub {
+  background-color: rgba(50, 50, 50, 0.5);
+  align-items: center;
+  display: flex;
+  height: 30px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 4px;
+}
+.mainvideo__player--controls--scrubline {
+  height: 1px;
+  background-color: #323232;
+  width: 110px;
+  display: inline-block;
+}
+.mainvideo__timestamp {
+  color: #AFAFAF;
+}
+.mainvideo__content {
+  display: flex;
+  border-top: 1px solid #E1E1E1;
+  border-bottom: 1px solid #E1E1E1;
+  gap: 16px;
+}
+.mainvideo__content--info {
+  color: #AFAFAF;
+}
+
+.articles {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.articles__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+.articles__comment {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.articles__button {
+  width: 100%;
+  color: white;
+  background-color: #0095FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  height: 40px;
+  border-radius: 4px;
+}
+.articles__title {
+  margin: 0;
+}
+.articles__input {
+  height: 50px;
+}/*# sourceMappingURL=VideoDetails.css.map */
