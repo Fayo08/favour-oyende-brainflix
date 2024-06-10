@@ -49,8 +49,11 @@ const newTimestamp = new Date (timestamp).toLocaleDateString();
   
   < img  className='articles__avatar'src={avatar} alt = "Avatar"  />
   <div className='articles__comment'>
+    <div className='articles__separate'>
   <h3 className='articles__title'>JOIN THE CONVERSATION</h3>
+  
   <textarea className='articles__input'></textarea> 
+  </div>
   <button className='articles__button'><span> <img src={commentIcon} alt="Views Icon" /> </span>COMMENT</button>
 
   </div>

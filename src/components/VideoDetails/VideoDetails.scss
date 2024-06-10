@@ -92,6 +92,51 @@
     gap: $Padding-between-components-m;
 
 
+    @include tablet{
+        display: flex;
+        justify-content: space-between;
+
+    
+       }
+       @include desktop{
+            display: flex;
+            justify-content: space-between;
+        }
+
+    &--one, &--two{
+
+        @include tablet{
+            display: flex;
+            gap: $Padding-between-components;
+            align-items: center;
+
+        
+           }
+           @include desktop{
+                display: flex;
+                gap: $Padding-between-components;
+                align-items: center;
+            }
+    }
+
+    &--two
+    {
+
+        @include tablet{
+            display: flex;
+            gap: $Padding-between-components;
+            align-items: center;
+
+        
+           }
+           @include desktop{
+                display: flex;
+                gap: $Padding-between-components;
+                align-items: center;
+            }
+        }
+
+
 
     &--info{
     color: $Silver;
@@ -113,10 +158,32 @@ margin-bottom: $Padding-between-components-m;
             border-radius: 50%; 
     }
     
+
+    &__separate{
+
+        @include tablet{
+            display: flex;
+            flex-direction:column;
+
+        
+           }
+    }
+
     &__comment{
         display: flex;
         flex-direction: column;
         gap: $Padding-between-components-m;
+
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+        
+           }
+           @include desktop{
+                
+            }
     }
 
     &__button{
@@ -129,7 +196,21 @@ margin-bottom: $Padding-between-components-m;
         border: none;
         height: 40px;
         border-radius: 4px;
+
+        @include tablet{
+            height: 40px;
+            width: 150px;
+            padding: 2rem;
+
+        
+           }
+           @include desktop{
+            height: 40px;
+            width: 150px;
+            padding: 2rem;
+            }
     }
+    
 
 
     &__title{
@@ -139,9 +220,25 @@ margin-bottom: $Padding-between-components-m;
     &__input{
     
         height: 50px;
+
+        @include tablet{
+            height: 40px;
+            width: 240px;
+
+        
+           }
+           @include desktop{
+            height: 40px;
+            width: 240px;
+            }
     }
 
+    @include tablet{
+      align-items: center;
+gap: $Padding-before-headlines;
 
+    
+       }
 
 }
 

@@ -30,6 +30,15 @@
             display: flex;
             align-self: flex-start;
             gap: $Padding-before-headlines-m;
+
+            @include tablet{
+                gap: 300px;
+    
+            
+               }
+               @include desktop{
+                    
+                }
         }
     
     }
