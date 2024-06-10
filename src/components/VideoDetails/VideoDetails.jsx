@@ -41,15 +41,16 @@ const newTimestamp = new Date (timestamp).toLocaleDateString();
         <p className='mainvideo__content--info'> <span> <img src={likesIcon} alt="likes Icon" /> </span> {likes} </p>
         </div>
         </div>
-        <p> {description} </p>  
+        <p> {description} </p> 
+        <h3><b>3 comments</b></h3> 
     </article>
 
 <article className='articles'>
   
   < img  className='articles__avatar'src={avatar} alt = "Avatar"  />
   <div className='articles__comment'>
-  <h3>JOIN THE CONVERSATION</h3>
-  <textarea></textarea> 
+  <h3 className='articles__title'>JOIN THE CONVERSATION</h3>
+  <textarea className='articles__input'></textarea> 
   <button className='articles__button'><span> <img src={commentIcon} alt="Views Icon" /> </span>COMMENT</button>
 
   </div>
@@ -59,8 +60,10 @@ const newTimestamp = new Date (timestamp).toLocaleDateString();
 
 {comments.map((comment)=>
 {
+
 return(
   <CommentItem
+
   key = {comment.id}
   {...comment}
   />

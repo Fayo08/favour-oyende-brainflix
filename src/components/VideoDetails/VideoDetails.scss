@@ -6,9 +6,10 @@
 
 .mainvideo{
 
-
-   
     
+    margin-top: $Padding-before-headlines-m;
+    margin-bottom: $Padding-before-headlines-m;
+
 &__player{
     width: 100%;
     aspect-ratio: 16/9;
@@ -78,6 +79,10 @@
 
 .articles{
 display: flex;
+gap: $Padding-between-components-m;
+margin-top: $Padding-between-components-m;
+margin-bottom: $Padding-between-components-m;
+
 
     &__avatar{
         width: 36px;
@@ -88,6 +93,7 @@ display: flex;
     &__comment{
         display: flex;
         flex-direction: column;
+        gap: $Padding-between-components-m;
     }
 
     &__button{
@@ -100,6 +106,16 @@ display: flex;
         border: none;
         height: 40px;
         border-radius: 4px;
+    }
+
+
+    &__title{
+        margin: 0;
+    }
+
+    &__input{
+    
+        height: 50px;
     }
 
 
