@@ -16,11 +16,11 @@ function VideoContainer({videoDetailsData}) {
 
       const selectVideo = (videoTitle) => {
      
-        // console.log('Select video: ', videoTitle);
+    
         const videoToSelect = videoDetailsData.find((video) => {
           return video.title === videoTitle;
         });
-        // console.log('video to select: ', videoToSelect);
+       
         const filteredVideos = mainVideo.filter((video)=> video.title !== videoToSelect.title)
         
         setmainVideo([videoToSelect, ...filteredVideos]);

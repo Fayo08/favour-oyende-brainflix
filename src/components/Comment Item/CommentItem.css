@@ -45,6 +45,11 @@
     gap: 300px;
   }
 }
+@media (min-width: 1280px) and (max-width: 1919px) {
+  .comment__info--details {
+    gap: 300px;
+  }
+}
 .comment__title {
   margin: 0;
 }
