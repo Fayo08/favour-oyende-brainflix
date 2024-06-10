@@ -2,9 +2,12 @@
 @use "./styles/partials/variables" as *;
 @use "./styles/partials/typography" as *;
 
+
 .app{
   font-family: 'Avenir Next LT Regular';
   font-size: 0;
   
-
+  @include desktop{
+    padding: $Padding-between-components 
+}
 }

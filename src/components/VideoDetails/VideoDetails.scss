@@ -5,8 +5,6 @@
 
 
 .mainvideo{
-
-    
     margin-top: $Padding-before-headlines-m;
     margin-bottom: $Padding-before-headlines-m;
 
@@ -23,10 +21,23 @@
     &--controlContainer{
         display: flex;
         justify-content: space-around;
-    align-items: center;
-    position: absolute;
-    top: 7rem;
-    gap: .5rem;
+        align-items: center;
+        position: absolute;
+        top: 7rem;
+        gap: .5rem;
+
+
+    @include tablet{
+        bottom: -15rem;
+        gap: 3rem;
+
+         
+    }
+    @include desktop{
+     bottom: -29rem;
+     gap: 2rem;
+    
+     }
         
     }
 
@@ -36,6 +47,8 @@
         display: flex;
         padding: 6px;
         border-radius: $border-radius;
+
+        
         
 
         &--scrub{
@@ -46,6 +59,8 @@
             padding-left: 6px;
             padding-right: 6px;
             border-radius: $border-radius;
+
+            
             
         }
 
@@ -54,6 +69,14 @@
             background-color: $BrainFlix-black ;
             width: 110px;
             display: inline-block;
+
+            @include tablet{
+             width: 400px;
+         
+            }
+            @include desktop{
+                width: 800px;
+             }
         }
     }
 }

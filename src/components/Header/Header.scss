@@ -8,6 +8,7 @@
   }
 
 .Header {
+   
   display: flex;
   flex-direction: column;
     gap: $Padding-between-components-m;
@@ -25,7 +26,18 @@
     &__container{
         display: flex;
         justify-content: space-between;
-        gap: $Padding-between-components-m;
+        flex-direction: column;
+        gap: 4px ;
+
+        @include tablet{
+           display: flex;
+        flex-direction: row;
+        }
+        @include desktop{
+            display: flex;
+         flex-direction: row;
+         }
+        
     }
     
     &__containerSearch{
@@ -33,11 +45,24 @@
     }
 
     &__searchInput{
-        width: 70%;
+        width: 240px;
+        height: 36px;
         border: 1px solid $Mercury;
         border-radius: $border-radius ;
         background-image: url(../../assets/Icons/upload.svg);
         background-position: -33px -30px;
+
+       @include tablet{
+            width: 240px;
+            height: 40px;
+            
+        }
+
+        @include desktop{
+            width: 240px;
+            height: 40px;
+            
+        }
     }
 
 
@@ -53,7 +78,7 @@
         color: white;
         background-color: $BrainFlix-blue;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         border: none;
         height: 40px;
@@ -63,6 +88,25 @@
     &__content{
         gap: $Padding-between-components-m;
         display: flex;
-        flex-direction: column;
+        
+
+        @include tablet{
+            display: flex;
+            
+        }
+    }
+    
+
+    @include tablet{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @include desktop{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: $Padding-between-components $Padding-before-headlines   $Padding-between-components $Padding-before-headlines;
     }
 }

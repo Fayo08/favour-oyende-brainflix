@@ -16,17 +16,13 @@ const Header = () => {
             <div className='Header__container'>
                 <input type="search" name="search" id="seardID"  placeholder='Search' className='Header__searchInput'/>
                 <label htmlFor="search" className='Search button'></label>
-                
+
+                <button className='Header__upload' ><span><img src= {uploadIcon} alt="upload icon" /></span> UPLOAD</button>
+                </div>
                 <div className='Header__avatar--container'>
                     <img src= {avatar} alt="Avatar" className='Header__avatar' />
                 </div>
-                </div>
-
-                <div className='Header__upload--container'>
-                    
-                    <button className='Header__upload' ><span><img src= {uploadIcon} alt="upload icon" /></span> UPLOAD</button>
-                    
-                </div>
+                
                 </div>
             </div>
     );
