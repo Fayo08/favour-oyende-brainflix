@@ -2,21 +2,16 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
+.article {
+  &__subheader {
+    color: $Silver;
+  }
 
-.article{
-
-    &__subheader{
-        color: $Silver;
-    }
-
-    
-
-    &__list{
-        margin: 0;
-        padding: 0;
-    }
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
 }
 
-.VideoDetails{
-    
+.VideoDetails {
 }

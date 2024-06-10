@@ -2,54 +2,46 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
-
-
-.comment{
-    
+.comment {
   display: flex;
   gap: $Padding-before-headlines;
-    border-bottom: 1px  solid $Mercury;
-    margin-top: $Padding-after-headlines-m;
+  border-bottom: 1px solid $Mercury;
+  margin-top: $Padding-after-headlines-m;
 
-    &__placeholderImg{
-        border-radius: 50%;
-        background-color: $Mercury;
-        width: 2.25rem;
-        height: 2.25rem;
+  &__placeholderImg {
+    border-radius: 50%;
+    background-color: $Mercury;
+    width: 2.25rem;
+    height: 2.25rem;
+  }
 
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+
+    &--details {
+      display: flex;
+      align-self: flex-start;
+      gap: $Padding-before-headlines-m;
+
+      @include tablet {
+        gap: 300px;
+      }
+      @include desktop {
+        gap: 300px;
+      }
     }
+  }
 
-    &__info{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
-        width: 70%;
+  &__title {
+    margin: 0;
+  }
 
-        &--details{
-            display: flex;
-            align-self: flex-start;
-            gap: $Padding-before-headlines-m;
-
-            @include tablet{
-                gap: 300px;
-    
-            
-               }
-               @include desktop{
-                gap: 300px;     
-                }
-        }
-    
-    }
-
-    &__title{
-        margin: 0;
-    }
-
-
-    &__date{
-        color: $Silver;
-        margin: 0;
-    }
+  &__date {
+    color: $Silver;
+    margin: 0;
+  }
 }

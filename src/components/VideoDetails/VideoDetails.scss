@@ -2,247 +2,198 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
+.mainvideo {
+  margin-top: $Padding-before-headlines-m;
+  margin-bottom: $Padding-before-headlines-m;
 
-
-.mainvideo{
-    margin-top: $Padding-before-headlines-m;
-    margin-bottom: $Padding-before-headlines-m;
-
-&__player{
+  &__player {
     width: 100%;
     aspect-ratio: 16/9;
 
-    &--container{
-        position: relative;
-        display: flex;
-    justify-content: center;
+    &--container {
+      position: relative;
+      display: flex;
+      justify-content: center;
     }
 
-    &--controlContainer{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        position: absolute;
-        top: 7rem;
-        gap: .5rem;
+    &--controlContainer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: absolute;
+      top: 7rem;
+      gap: 0.5rem;
 
-
-    @include tablet{
+      @include tablet {
         bottom: -15rem;
         gap: 3rem;
-
-         
-    }
-    @include desktop{
-     bottom: -29rem;
-     gap: 2rem;
-    
-     }
-        
+      }
+      @include desktop {
+        bottom: -29rem;
+        gap: 2rem;
+      }
     }
 
-    &--controls{
-        background-color: $BandSite-Darkblack-overlay ;
-        width: fit-content;
+    &--controls {
+      background-color: $BandSite-Darkblack-overlay;
+      width: fit-content;
+      display: flex;
+      padding: 6px;
+      border-radius: $border-radius;
+
+      &--scrub {
+        background-color: $BandSite-Darkblack-overlay;
+        align-items: center;
         display: flex;
-        padding: 6px;
+        height: 30px;
+        padding-left: 6px;
+        padding-right: 6px;
         border-radius: $border-radius;
+      }
 
-        
-        
+      &--scrubline {
+        height: 1px;
+        background-color: $BrainFlix-black;
+        width: 110px;
+        display: inline-block;
 
-        &--scrub{
-            background-color: $BandSite-Darkblack-overlay ;
-            align-items: center;
-            display: flex;
-            height: 30px;
-            padding-left: 6px;
-            padding-right: 6px;
-            border-radius: $border-radius;
-
-            
-            
+        @include tablet {
+          width: 400px;
         }
-
-        &--scrubline{
-            height: 1px;
-            background-color: $BrainFlix-black ;
-            width: 110px;
-            display: inline-block;
-
-            @include tablet{
-             width: 400px;
-         
-            }
-            @include desktop{
-                width: 800px;
-             }
+        @include desktop {
+          width: 800px;
         }
+      }
     }
-}
+  }
 
-&__timestamp{
+  &__timestamp {
     color: $Silver;
-}
+  }
 
-&__content{
+  &__content {
     display: flex;
     border-top: 1px solid $Mercury;
     border-bottom: 1px solid $Mercury;
     gap: $Padding-between-components-m;
 
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+    }
 
-    @include tablet{
+    &--one,
+    &--two {
+      @include tablet {
         display: flex;
-        justify-content: space-between;
-
-    
-       }
-       @include desktop{
-            display: flex;
-            justify-content: space-between;
-        }
-
-    &--one, &--two{
-
-        @include tablet{
-            display: flex;
-            gap: $Padding-between-components;
-            align-items: center;
-
-        
-           }
-           @include desktop{
-                display: flex;
-                gap: $Padding-between-components;
-                align-items: center;
-            }
-    }
-
-    &--two
-    {
-
-        @include tablet{
-            display: flex;
-            gap: $Padding-between-components;
-            align-items: center;
-
-        
-           }
-           @include desktop{
-                display: flex;
-                gap: $Padding-between-components;
-                align-items: center;
-            }
-        }
-
-
-
-    &--info{
-    color: $Silver;
-    }
-}
-
-}
-
-.articles{
-display: flex;
-gap: $Padding-between-components-m;
-margin-top: $Padding-between-components-m;
-margin-bottom: $Padding-between-components-m;
-
-
-    &__avatar{
-        width: 36px;
-            height: 36px;
-            border-radius: 50%; 
-    }
-    
-
-    &__separate{
-
-        @include tablet{
-            display: flex;
-            flex-direction:column;
-
-        
-           }
-    }
-
-    &__comment{
-        display: flex;
-        flex-direction: column;
-        gap: $Padding-between-components-m;
-
-        @include tablet{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-
-        
-           }
-           @include desktop{
-                
-            }
-    }
-
-    &__button{
-        width: 100%;
-        color: white;
-        background-color: #0095FF;
-        display: flex;
-        justify-content: center;
+        gap: $Padding-between-components;
         align-items: center;
-        border: none;
-        height: 40px;
-        border-radius: 4px;
-
-        @include tablet{
-            height: 40px;
-            width: 150px;
-            padding: 2rem;
-
-        
-           }
-           @include desktop{
-            height: 40px;
-            width: 150px;
-            padding: 2rem;
-            }
-    }
-    
-
-
-    &__title{
-        margin: 0;
+      }
+      @include desktop {
+        display: flex;
+        gap: $Padding-between-components;
+        align-items: center;
+      }
     }
 
-    &__input{
-    
-        height: 50px;
-
-        @include tablet{
-            height: 40px;
-            width: 240px;
-
-        
-           }
-           @include desktop{
-            height: 40px;
-            width: 240px;
-            }
+    &--two {
+      @include tablet {
+        display: flex;
+        gap: $Padding-between-components;
+        align-items: center;
+      }
+      @include desktop {
+        display: flex;
+        gap: $Padding-between-components;
+        align-items: center;
+      }
     }
 
-    @include tablet{
-      align-items: center;
-gap: $Padding-before-headlines;
-
-    
-       }
-
+    &--info {
+      color: $Silver;
+    }
+  }
 }
 
+.articles {
+  display: flex;
+  gap: $Padding-between-components-m;
+  margin-top: $Padding-between-components-m;
+  margin-bottom: $Padding-between-components-m;
 
+  &__avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
 
+  &__separate {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 
+  &__comment {
+    display: flex;
+    flex-direction: column;
+    gap: $Padding-between-components-m;
 
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    @include desktop {
+    }
+  }
+
+  &__button {
+    width: 100%;
+    color: white;
+    background-color: #0095ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    height: 40px;
+    border-radius: 4px;
+
+    @include tablet {
+      height: 40px;
+      width: 150px;
+      padding: 2rem;
+    }
+    @include desktop {
+      height: 40px;
+      width: 150px;
+      padding: 2rem;
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__input {
+    height: 50px;
+
+    @include tablet {
+      height: 40px;
+      width: 240px;
+    }
+    @include desktop {
+      height: 40px;
+      width: 240px;
+    }
+  }
+
+  @include tablet {
+    align-items: center;
+    gap: $Padding-before-headlines;
+  }
+}
