@@ -1,0 +1,21 @@
+
+
+.searchInput{
+    width: 240px;
+    height: 36px;
+    border: 1px solid $Mercury;
+    border-radius: $border-radius ;
+    background-image: url(../../assets/Icons/upload.svg);
+    background-position: -33px -30px;
+
+   @include tablet{
+        width: 240px;
+        height: 40px;
+        
+    }
+
+    @include desktop{
+        width: 240px;
+        height: 40px;
+        
+    }
