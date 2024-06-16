@@ -4,10 +4,10 @@ import axios from "axios";
 import { API_URL } from "../../../utils";
 import { API_KEY } from "../../../utils";
 import React from "react";
-import Hero from "../../components/Hero/Hero";
-import HeroDetails from "../../components/HeroDetails/HeroDetails";
-import Comments from '../../components/Comments/Comments';
-import VideoContainer from "../../components/VideoContainer/VideoContainer";
+// import Hero from "../../components/Hero/Hero";
+// import HeroDetails from "../../components/HeroDetails/HeroDetails";
+// import Comments from '../../components/Comments/Comments';
+// import VideoContainer from "../../components/VideoContainer/VideoContainer";
 import videoDetailsData from "../../assets/Data/video-details.json";
 
 
