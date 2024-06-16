@@ -2,19 +2,41 @@ import React from "react";
 import avatar from "../../assets/Images/Mohan-muruge.jpg";
 import viewsIcon from "../../assets/Icons/views.svg";
 import CommentItem from "../Comment Item/CommentItem";
+import { useState, useEffect } from 'react'
+import axios from "axios";
+import { API_URL } from "../../../utils";
+import { API_KEY } from "../../../utils";
 
 import'./Comments.scss';
 
 
-function Comments({ 
-    comments, }) {
+function Comments() {
 
-    
-    
-    // if (!commentsData) {
-    //     return <p>Loading...</p>;
-    //   }
+        const [comments, setComments] = useState([]);
       
+    
+        useEffect(() => {
+          async function getComments() {
+            try {
+              const response = await axios.get(`${API_URL}/videos/84e96018-4022-434e-80bf-000ce4cd12b8/?api_key=${API_KEY}`);
+              console.log(response.data.comments)
+             
+              setComments(response.data.comments)
+            } catch (error) {
+              console.log('API request error:\n', error)
+            }
+            
+          }
+          getComments()  ;
+        }, []);
+        
+        if (!comments || comments.length === 0) {
+          return (
+            <p> Just a moment while we load the comment details....</p>
+          );
+        }
+    
+   
   
 
   console.log({comments})

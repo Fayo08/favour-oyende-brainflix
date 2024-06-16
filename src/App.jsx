@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
 import Header from './components/Header/Header'
 import Homepage from './pages/Homepage/Homepage';
 import './App.scss'
@@ -10,8 +10,6 @@ import VideoDetailsPage from './pages/VideoDetailsPage/VideoDetailsPage'
 function App() {
  
 
- 
-
   return (
     <>
     <BrowserRouter>
@@ -20,7 +18,7 @@ function App() {
    <Routes>
     <Route path="/" element={<Homepage  />}/> 
      <Route path="/upload" element={<VideoUploadPage />} /> 
-     <Route path="/videoId" element={<VideoDetailsPage />} /> 
+     <Route path="/videos/:videoId" element={<VideoDetailsPage />} /> 
 
    </Routes>
    </BrowserRouter>

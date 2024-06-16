@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import axios from "axios";
 import { API_URL } from "../../../utils";
 import { API_KEY } from "../../../utils";
+
 import { NavLink, Link } from "react-router-dom";
 
 
@@ -12,7 +13,7 @@ import { NavLink, Link } from "react-router-dom";
 
 function VideoContainer() {
   
-  const [mainVideo, setmainVideo] = useState([]);
+  const [videoList, setvideoList] = useState([]);
   
 
   useEffect(() => {
@@ -21,11 +22,9 @@ function VideoContainer() {
         const response = await axios.get(`${API_URL}/videos?api_key=${API_KEY}`);
         console.log(response)
 
-        const videosArray = response.data
-        console.log(`videoes array`, videosArray)
-
-    
-         setmainVideo(videosArray)
+        
+       
+        setvideoList(response.data)
       } catch (error) {
         console.log('API request error:\n', error)
       }
@@ -34,39 +33,35 @@ function VideoContainer() {
  getVideo()  ;
   }, []);
 
-  if (!mainVideo || mainVideo.length === 0) {
+  
+
+  const filteredVideos = videoList.filter((video) => video.id !== '84e96018-4022-434e-80bf-000ce4cd12b8');
+console.log(...filteredVideos);
+
+
+  if (!filteredVideos || filteredVideos.length === 0) {
     return (
       <p> Just a moment while we load the video details....</p>
     );
-  }
+  };
 
-    return (
-      <>
-<h3 className="article__subheader" >Next Videos</h3>
+  return (
+    <>
+    <div>
+      <h3 className="article__subheader">Next Videos</h3>
+      {filteredVideos.map((video) => (
+        <VideoItem
+          key={video.id}
+          className="article"
+          to={`/videos/${video.id}`}
+          {...video}
+          // handleClick={handleClick}
+        />
+      ))}
+      </div>
+    </>
+  );
+}
 
-{mainVideo.map((video)=>{
-
-
-//dont forget to add classname
-  return(<NavLink > 
-
-    <VideoItem  
-   
-    className="article"  
-  key={video.id} to ={`/videos/${video.id}`}
-  {...video}
-  
-  // handleClick = {handleClick}
-  
-  
-  />
-  </NavLink>
-
-)})}
-     
-     </>   
-
-    )
-  }
 
 export default VideoContainer;
