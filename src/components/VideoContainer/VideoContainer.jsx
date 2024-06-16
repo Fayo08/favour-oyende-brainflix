@@ -1,64 +1,72 @@
 import VideoItem from "../VideoItem/VideoItem";
 import VideoDetails from "../VideoDetails/VideoDetails"
 import './VideoContainer.scss'
-import { useState } from 'react'
-import CommentItem from "../Comment Item/CommentItem";
+import { useState, useEffect } from 'react'
+import axios from "axios";
+import { API_URL } from "../../../utils";
+import { API_KEY } from "../../../utils";
+import { NavLink, Link } from "react-router-dom";
 
 
-function VideoContainer({videoDetailsData}) {
-
-    if (!Array.isArray(videoDetailsData)) {
-        return <div>Invalid data format</div>;
-      }
 
 
-      const [mainVideo, setmainVideo] = useState(videoDetailsData)
+function VideoContainer() {
+  
+  const [mainVideo, setmainVideo] = useState([]);
+  
 
-      const selectVideo = (videoTitle) => {
-     
+  useEffect(() => {
+    async function getVideo() {
+      try {
+        const response = await axios.get(`${API_URL}/videos?api_key=${API_KEY}`);
+        console.log(response)
+
+        const videosArray = response.data
+        console.log(`videoes array`, videosArray)
+
     
-        const videoToSelect = videoDetailsData.find((video) => {
-          return video.title === videoTitle;
-        });
-       
-        const filteredVideos = mainVideo.filter((video)=> video.title !== videoToSelect.title)
-        
-        setmainVideo([videoToSelect, ...filteredVideos]);
+         setmainVideo(videosArray)
+      } catch (error) {
+        console.log('API request error:\n', error)
       }
+      
+    }
+ getVideo()  ;
+  }, []);
 
-
-
-const firstVideo = mainVideo.slice(0, 1)[0]
-const restVideos = mainVideo.slice(1)
+  if (!mainVideo || mainVideo.length === 0) {
+    return (
+      <p> Just a moment while we load the video details....</p>
+    );
+  }
 
     return (
-        <article className="article">
-            <VideoDetails 
-            {...firstVideo}
-             />
+      <>
+<h3 className="article__subheader" >Next Videos</h3>
 
-            <h3 className="article__subheader" >Next Videos</h3>
-            <ul className="article__list">
-                { restVideos.map ((video) => {
+{mainVideo.map((video)=>{
 
-                    return (
-                      <VideoItem
-                      selectVideo = {selectVideo}
 
-                      key= {video.id} 
-                      title= {video.title}
-                      video= {video.video}
-                      channel= {video.channel}
-                      poster = {video.image}
+//dont forget to add classname
+  return(<NavLink > 
 
-                      />
-                    )
+    <VideoItem  
+   
+    className="article"  
+  key={video.id} to ={`/videos/${video.id}`}
+  {...video}
+  
+  // handleClick = {handleClick}
+  
+  
+  />
+  </NavLink>
 
-                })}
+)})}
+     
+     </>   
 
-            </ul>
-        </article>
-    );
-}
+    )
+  }
 
 export default VideoContainer;

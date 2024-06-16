@@ -145,7 +145,99 @@
 
 }
 
+.articles{
+display: flex;
+gap: $Padding-between-components-m;
+margin-top: $Padding-between-components-m;
+margin-bottom: $Padding-between-components-m;
 
 
+    &__avatar{
+        width: 36px;
+            height: 36px;
+            border-radius: 50%; 
+    }
+    
+
+    &__separate{
+
+        @include tablet{
+            display: flex;
+            flex-direction:column;
+
+        
+           }
+    }
+
+    &__comment{
+        display: flex;
+        flex-direction: column;
+        gap: $Padding-between-components-m;
+
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+        
+           }
+           @include desktop{
+                
+            }
+    }
+
+    &__button{
+        width: 100%;
+        color: white;
+        background-color: #0095FF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        height: 40px;
+        border-radius: 4px;
+
+        @include tablet{
+            height: 40px;
+            width: 150px;
+            padding: 2rem;
+
+        
+           }
+           @include desktop{
+            height: 40px;
+            width: 150px;
+            padding: 2rem;
+            }
+    }
+    
 
 
+    &__title{
+        margin: 0;
+    }
+
+    &__input{
+    
+        height: 50px;
+
+        @include tablet{
+            height: 40px;
+            width: 240px;
+
+        
+           }
+           @include desktop{
+            height: 40px;
+            width: 240px;
+            }
+    }
+
+    @include tablet{
+      align-items: center;
+gap: $Padding-before-headlines;
+
+    
+       }
+
+}

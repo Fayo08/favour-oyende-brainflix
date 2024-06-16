@@ -2,12 +2,19 @@ import React from 'react';
 import './VideoItem.scss'
 
 
-function VideoItem({ title, video, channel, poster, selectVideo}) {
+function VideoItem({ id, title, video, channel, image, handleClick} ) {
     
-    
+  
+  
+
     return (
-        <li  className='video'>
-        <video onClick ={()=> selectVideo(title)} className='video__thumbnail' poster={poster} src={video} ></video>
+      <>
+      
+            <ul className="article__list">
+                </ul>
+
+        <li  className='video' onClick={() => handleClick(id)}>
+        <video className='video__thumbnail' poster={image} src={video} ></video>
         <div className='video__info'>
       <h3 className='video__title' >{title}</h3 >
       <p  className='video__name' >{channel}</p>
@@ -15,6 +22,7 @@ function VideoItem({ title, video, channel, poster, selectVideo}) {
       </div>
       
     </li>
+    </>
     );
 }
 
