@@ -1,0 +1,188 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+
+
+.mainvideo{
+    margin-top: $Padding-before-headlines-m;
+    margin-bottom: $Padding-before-headlines-m;
+    display: flex;
+
+&__player{
+    width: 100%;
+    aspect-ratio: 16/9;
+
+    &--container{
+        position: relative;
+        display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @include tablet{
+        flex-direction: column;
+
+         
+    }
+    @include desktop{
+     bottom: -29rem;
+     gap: 2rem;
+    
+     }
+
+    }
+
+    &--controlContainer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        position: absolute;
+        top: 8rem;
+        left: .2rem;
+        gap: .5rem;
+
+
+    @include tablet{
+        bottom: 5rem;
+        left: 2rem;
+        gap: 3rem;
+
+         
+    }
+    @include desktop{
+     bottom: -29rem;
+     gap: 2rem;
+    
+     }
+        
+    }
+
+    &--controls{
+        background-color: $BandSite-Darkblack-overlay ;
+        width: fit-content;
+        display: flex;
+        padding: 6px;
+        border-radius: $border-radius;
+
+        
+        
+
+        &--scrub{
+            background-color: $BandSite-Darkblack-overlay ;
+            align-items: center;
+            display: flex;
+            height: 30px;
+            padding-left: 6px;
+            padding-right: 6px;
+            border-radius: $border-radius;
+
+            
+            
+        }
+
+        &--scrubline{
+            height: 1px;
+            background-color: $BrainFlix-black ;
+            width: 110px;
+            display: inline-block;
+
+            @include tablet{
+             width: 400px;
+         
+            }
+            @include desktop{
+                width: 800px;
+             }
+
+             &--scrublines{
+               color: white;
+    
+               
+        }
+    }
+}
+
+
+&__title{
+    font-weight: 800;
+}
+
+&__timestamp{
+    color: $Silver;
+}
+
+
+
+&__content{
+    display: flex;
+    border-top: 1px solid $Mercury;
+    border-bottom: 1px solid $Mercury;
+    gap: $Padding-between-components-m;
+
+
+    @include tablet{
+        display: flex;
+        justify-content: space-between;
+
+    
+       }
+       @include desktop{
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+
+
+    &--one, &--two{
+
+        @include tablet{
+            display: flex;
+            gap: $Padding-between-components;
+            align-items: center;
+
+        
+           }
+           @include desktop{
+                display: flex;
+                gap: $Padding-between-components;
+                align-items: center;
+            }
+    }
+
+    &--two
+    {
+
+        @include tablet{
+            display: flex;
+            gap: $Padding-between-components;
+            align-items: center;
+
+        
+           }
+           @include desktop{
+                display: flex;
+                gap: $Padding-between-components;
+                align-items: center;
+            }
+        }
+
+
+
+    &--info{
+    color: $Silver;
+    }
+}
+@include tablet{
+   flex-direction: column;
+    align-items: center;
+
+
+   }
+   @include desktop{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}}

@@ -1,0 +1,145 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+.Upload_title{
+font-weight: 700;
+
+
+
+@include tablet{
+    font-weight: 700;
+}
+
+@include desktop{
+    font-weight: 700;
+}
+
+
+.borders{
+    border-top: 1px solid $Mercury;
+    border-bottom: 1px solid $Mercury;
+
+}
+
+}
+
+.label{
+    color: $Silver;
+    font-weight: 600;
+}
+
+.Video_thumbnail{
+    font-weight: 600;
+    color: silver;
+}
+
+.form_group{
+display: flex;
+flex-direction: column;
+gap: .25rem;
+margin-top: $Padding-after-headlines-m;
+margin-bottom: $Padding-before-headlines-m;
+}
+
+
+.img_upload{
+    width: 100%;
+}
+
+.form_control_1{
+    height: 36px;
+    width: 240px;
+    border: 1px solid $Mercury;
+    border-radius: $border-radius;
+    padding: 12px;
+
+    background-color: $Alabaster;
+
+    @include tablet{
+        height: 2.5rem;
+    padding: 16px;
+    width: 100%;
+
+    }
+
+    @include desktop{
+        height: 2.5rem;
+    padding: 16px;
+
+    }
+}
+
+.form_control_2{
+    height: 36px;
+    width: 240px;
+    border: 1px solid $Mercury;
+    padding: 12px;
+    border-radius: $border-radius;
+
+    @include tablet{
+        height: 2.5rem;
+        width: 100%;
+    }
+
+    @include desktop{
+        height: 2.5rem;
+    }
+}
+
+.upload-button{
+    width: 100%;
+        color: white;
+        background-color: $BrainFlix-blue;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        border: none;
+        height: 40px;
+        border-radius: $border-radius;
+        margin-bottom: $Padding-after-headlines-m;
+        font-weight: 600;
+
+        @include tablet{
+            width: 9.375rem;
+            justify-content: left;
+        }
+    
+        @include desktop{
+            width: 9.375rem;
+        }
+}
+
+.publish-icon{
+    margin-right: 5.5rem;
+    
+    @include tablet{
+        margin-right: 2rem;
+    }
+
+    @include desktop{
+        margin-right: 2rem;
+    }
+
+}
+
+.Cancel_button{
+    text-align: center;
+    color: $BrainFlix-blue;
+    font-weight: 600;
+
+
+}
+
+.buttons{
+
+    @include tablet{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 32px;
+    }
+
+    @include desktop{
+        height: 2.5rem;
+    }
+}
