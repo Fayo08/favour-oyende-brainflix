@@ -1,52 +1,61 @@
 import VideoItem from "../VideoItem/VideoItem";
-import VideoDetails from "../VideoDetails/VideoDetails";
-import "./VideoContainer.scss";
-import { useState } from "react";
-import CommentItem from "../Comment Item/CommentItem";
+import VideoDetails from "../VideoDetails/VideoDetails"
+import './VideoContainer.scss'
+import { useState, useEffect } from 'react'
+import axios from "axios";
+import { API_URL } from "../../../utils";
+import { API_KEY } from "../../../utils";
 
-function VideoContainer({ videoDetailsData }) {
-  if (!Array.isArray(videoDetailsData)) {
-    return <div>Invalid data format</div>;
-  }
+import { NavLink, Link } from "react-router-dom";
 
-  const [mainVideo, setmainVideo] = useState(videoDetailsData);
 
-  const selectVideo = (videoTitle) => {
-    const videoToSelect = videoDetailsData.find((video) => {
-      return video.title === videoTitle;
-    });
 
-    const filteredVideos = mainVideo.filter(
-      (video) => video.title !== videoToSelect.title
+
+function VideoContainer() {
+  
+  const [videoList, setVideoList] = useState([]);
+  
+
+  useEffect(() => {
+    async function getVideo() {
+      try {
+        const response = await axios.get(`${API_URL}/videos?api_key=${API_KEY}`);
+       
+       
+        setVideoList(response.data)
+      } catch (error) {
+        console.log('API request error:\n', error)
+      }
+      
+    }
+ getVideo()  ;
+  }, []);
+
+  
+
+  const filteredVideos = videoList.filter((video) => video.id !== videoList[0]?.id);
+
+
+
+  if (!filteredVideos || filteredVideos.length === 0) {
+    return (
+      <p> Just a moment while we load the video details....</p>
     );
-
-    setmainVideo([videoToSelect, ...filteredVideos]);
   };
 
-  const firstVideo = mainVideo.slice(0, 1)[0];
-  const restVideos = mainVideo.slice(1);
-
   return (
-    <article className="article">
-      <VideoDetails {...firstVideo} />
-
+    <>
       <h3 className="article__subheader">Next Videos</h3>
-      <ul className="article__list">
-        {restVideos.map((video) => {
-          return (
-            <VideoItem
-              selectVideo={selectVideo}
-              key={video.id}
-              title={video.title}
-              video={video.video}
-              channel={video.channel}
-              poster={video.image}
-            />
-          );
-        })}
-      </ul>
-    </article>
+      {filteredVideos.map((video) => (
+        <NavLink key={video.id} className="article" to={`/videos/${video.id}`}>
+          <VideoItem {...video} />
+        </NavLink>
+      ))}
+    </>
   );
 }
 
+
 export default VideoContainer;
+
+

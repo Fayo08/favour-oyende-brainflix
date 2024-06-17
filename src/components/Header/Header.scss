@@ -2,23 +2,23 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
-* {
-  font-family: "Avenir Next LT Regular";
-}
+
+
 
 .Header {
-  display: flex;
-  flex-direction: column;
-  gap: $Padding-between-components-m;
-  font-family: "Avenir Next LT Regular";
-  justify-content: center;
-  padding: $Padding-between-components-m;
+   
+    display: flex;
+    flex-direction: column;
+    gap: $Padding-between-components-m;
+    justify-content: center;
+    padding: $Padding-between-components-m;
+    
 
-  &__logo {
-    width: 120px;
-    height: 25px;
-    align-self: center;
-  }
+    &__logo{
+        width: 120px;
+        height: 25px;
+        align-self: center;
+    }
 
   &__container {
     display: flex;
@@ -26,77 +26,149 @@
     flex-direction: column;
     gap: 4px;
 
-    @include tablet {
-      display: flex;
-      flex-direction: row;
+        @include tablet{
+           display: flex;
+        flex-direction: row;
+        }
+        @include desktop{
+            display: flex;
+         flex-direction: row;
+         }
+        
     }
-    @include desktop {
-      display: flex;
-      flex-direction: row;
-    }
-  }
+    
 
-  &__containerSearch {
+
+&__form {
+   
+    position: relative;
     display: flex;
-  }
-
-  &__searchInput {
-    width: 240px;
-    height: 36px;
-    border: 1px solid $Mercury;
-    border-radius: $border-radius;
-    background-image: url(../../assets/Icons/upload.svg);
-    background-position: -33px -30px;
-
-    @include tablet {
-      width: 240px;
-      height: 40px;
-    }
-
-    @include desktop {
-      width: 240px;
-      height: 40px;
-    }
-  }
-
-  &__avatar {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-  }
-
-  &__upload {
-    width: 100%;
-    color: white;
-    background-color: $BrainFlix-blue;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border: none;
-    height: 40px;
-    border-radius: $border-radius;
-  }
-
-  &__content {
+    flex-direction: column;
     gap: $Padding-between-components-m;
-    display: flex;
 
-    @include tablet {
-      display: flex;
+
+
+    &--icon{
+        position: absolute;
+        top: 26%;
+        right: 10px;
+        
+        @include tablet{
+            top: 26%;
+            left: 213px;
+        }
+
+        @include desktop{
+
+        }
+      
     }
-  }
 
-  @include tablet {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+    &--control{
+        width: 240px;
+        height: 36px;
+        border: 1px solid $Mercury;
+        border-radius: $border-radius ;
+    
+        @include tablet{
+            width: 240px;
+            height: 40px;
+            
+        }
+    
+        @include desktop{
+            width: 240px;
+            height: 40px;
+            
+        }
+    }
 
-  @include desktop {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: $Padding-between-components $Padding-before-headlines
-      $Padding-between-components $Padding-before-headlines;
-  }
+    @include tablet{
+      flex-direction: row;
+        
+    }
+
+    @include desktop{
+        flex-direction: row;
+    }
+
+
 }
+    
+    
+
+    &__avatar{
+        width: 36px;
+        height: 36px;
+        border-radius: 50%; 
+    }
+
+
+    &__upload{
+        width: 100%;
+        color: white;
+        background-color: $BrainFlix-blue;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        border: none;
+        height: 40px;
+        border-radius: $border-radius;
+
+        @include tablet{
+            padding-left: 32px;
+            padding-right: 32px;
+            justify-content: left;
+
+              
+          }
+      
+          @include desktop{
+              flex-direction: row;
+          }
+
+
+        &--icon{
+            margin-right: 70px;
+        }
+    }
+
+    &__content{
+        gap: $Padding-between-components-m;
+        display: flex;
+       
+        
+
+        @include tablet{
+            display: flex;
+            width: fit-content;
+        }
+    }
+    
+
+    @include tablet{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        padding: $Padding-between-components $Padding-before-headlines  $Padding-between-components $Padding-before-headlines;
+    }
+
+    @include desktop{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: $Padding-between-components $Padding-before-headlines   $Padding-between-components $Padding-before-headlines;
+    }
+}
+
+
+
+   
+
+
+
+
+
+
+
+
