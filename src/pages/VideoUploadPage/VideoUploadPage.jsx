@@ -5,17 +5,19 @@ import publishIcon from '../../assets/Icons/publish.svg'
 import './VideoUploadpage.scss'
 function VideoUploadPage(props) {
     return (
-        <div  >
+        <div className='video-upload-container'  >
            
             <h2 className='Upload_title' >Upload Video</h2>
 
             
             <div className='borders' >
+             <div>
             <p className='Video_thumbnail'>VIDEO THUMBNAIL</p>
 
             
             <img src= {VideoThumbnail} alt="Runner getting set"  className='img_upload'/>
-           <form action="">
+            </div>
+           <form action="" className='form'>
             <div className='form_group' >
                 <label className='label' htmlFor="title">TITLE YOUR VIDEO</label>
                <input type="text" name="title" id="title" className='form_control_1' placeholder='Add a title to your video'/>

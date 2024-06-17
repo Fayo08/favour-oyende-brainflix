@@ -8,6 +8,41 @@
     margin-top: $Padding-before-headlines-m;
     margin-bottom: $Padding-before-headlines-m;
     display: flex;
+    
+
+
+
+
+    &__title{
+        font-weight: $text-weight-section-header-m;
+
+        @include tablet{
+            font-weight: $text-weight-section-header;
+        }
+
+        @include desktop{
+            font-weight: $text-weight-section-header;
+        }
+      
+    }
+
+    &__channel{
+        font-weight: $text-weight-subheader-m;
+
+
+        @include tablet{
+            font-weight: $text-weight-subheader;
+        }
+
+        @include desktop{
+            font-weight: $text-weight-subheader;
+        }
+      
+    }
+
+    &__comments{
+        font-weight: $text-weight-subheader;
+    }
 
 &__player{
     width: 100%;
@@ -104,9 +139,7 @@
 }
 
 
-&__title{
-    font-weight: 800;
-}
+
 
 &__timestamp{
     color: $Silver;
@@ -133,6 +166,11 @@
         }
 
 
+        &--info{
+            color: $Silver;
+            display: flex;
+            
+            }
 
 
     &--one, &--two{
@@ -170,9 +208,6 @@
 
 
 
-    &--info{
-    color: $Silver;
-    }
 }
 @include tablet{
    flex-direction: column;
@@ -186,3 +221,7 @@
     }
 
 }}
+
+.mainvideo-container{
+    padding: 0 $Padding-after-headlines-m 0 $Padding-after-headlines-m;
+}

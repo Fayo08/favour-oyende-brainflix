@@ -44,15 +44,16 @@
 
 
     @include tablet{
-        bottom: 5rem;
+        bottom: -14rem;
         left: 2rem;
         gap: 3rem;
 
          
     }
     @include desktop{
-     bottom: -29rem;
+     bottom: -21rem;
      gap: 2rem;
+     right: 3rem
     
      }
         

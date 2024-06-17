@@ -5,8 +5,20 @@
 
 .article{
 
+    text-decoration: none;
+    color: $BrainFlix-black;
+
     &__subheader{
         color: $Silver;
+        font-weight: $text-weight-subheader-m;
+
+        @include tablet{
+            font-weight: $text-weight-subheader;
+        }
+
+        @include desktop{
+            font-weight: $text-weight-subheader;
+        }
     }
 
     
@@ -17,6 +29,17 @@
     }
 }
 
-.VideoDetails{
-    
+
+
+.Next-videos-container{
+
+    padding: 0 $Padding-between-components-m 0 $Padding-between-components-m;
+
+    @include tablet{
+        padding: 0 $Padding-between-components 0 $Padding-between-components; 
+    }
+
+    @include desktop{
+        padding: 0 $Padding-between-components 0 $Padding-between-components;
+    }
 }

@@ -38,7 +38,7 @@ function HeroDetails(props) {
    const newTimestamp = new Date (timestamp).toLocaleDateString();
     return (
         
-             <div >
+             <div  className='mainvideo-container'>
              <h2 className="mainvideo__title" > {title} </h2>
       <div className='mainvideo__content' >
         <div className='mainvideo__content--one' >
@@ -51,7 +51,7 @@ function HeroDetails(props) {
         </div>
         </div>
         <p> {description} </p> 
-        <h3><b>3 comments</b></h3> 
+        <h3 className='mainvideo__comments'>3 comments</h3> 
         </div>
    
     );

@@ -23,6 +23,27 @@ border-radius: $border-radius;
     flex-direction: column;
 }
 
+
+&__title{
+    text-decoration: none;
+    font-weight: $text-weight-subheader-m;
+
+}
+
+
+&__name{
+    text-decoration: none;
+    font-size: $font-size-subheader-m;
+
+    @include tablet{
+        font-size: $font-size-body-copy; 
+    }
+
+    @include desktop{
+        font-size: $font-size-body-copy; 
+    }
+}
+
 }
 
 
