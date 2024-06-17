@@ -45,12 +45,14 @@ function VideoContainer() {
 
   return (
     <>
-      <h3 className="article__subheader">Next Videos</h3>
+    <div className="Next-videos-container">
+      <h3 className="article__subheader">NEXT VIDEOS</h3>
       {filteredVideos.map((video) => (
         <NavLink key={video.id} className="article" to={`/videos/${video.id}`}>
           <VideoItem {...video} />
         </NavLink>
       ))}
+      </div>
     </>
   );
 }

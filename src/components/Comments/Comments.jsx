@@ -47,11 +47,11 @@ function Comments() {
         <img className="articles__avatar" src={avatar} alt="Avatar" />
 <form className="articles__separate">
   <div className="articles__form">
-    <label htmlFor="commentArea">JOIN THE CONVERSATION</label>
+    <label htmlFor="commentArea" className="articles__title">JOIN THE CONVERSATION</label>
     <textarea className="articles__input" placeholder="Add a new comment"></textarea>
   </div>
         <button className="articles__button">
-          <span>
+          <span className="articles__icon" >
             {" "}
             <img src={commentsIcon} alt="Views Icon" />{" "}
           </span>

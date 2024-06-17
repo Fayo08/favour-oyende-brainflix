@@ -59,7 +59,9 @@
         }
 
         @include desktop{
-
+                top: 26%;
+                left: 13rem;
+            
         }
       
     }
@@ -114,6 +116,7 @@
         border: none;
         height: 40px;
         border-radius: $border-radius;
+        font-weight: $text-weight-buttons-m;
 
         @include tablet{
             padding-left: 32px;
@@ -130,6 +133,8 @@
 
         &--icon{
             margin-right: 70px;
+
+
         }
     }
 
@@ -142,6 +147,12 @@
         @include tablet{
             display: flex;
             width: fit-content;
+        }
+
+        @include tablet{
+            display: flex;
+            width: fit-content;
+            gap: 3rem;
         }
     }
     

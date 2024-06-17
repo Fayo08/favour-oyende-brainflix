@@ -6,6 +6,7 @@
 .articles {
     margin-top: $Padding-between-components-m;
     margin-bottom: $Padding-between-components-m;
+    padding: 0 $Padding-after-headlines-m 0 $Padding-after-headlines-m;
     
     
         &__avatar{
@@ -20,6 +21,8 @@
                 }
     
         &__separate{
+
+
 
             display: flex;
                 flex-direction:column;
@@ -38,6 +41,15 @@
         &__form{
             display: flex;
             flex-direction: column;
+            gap: 4px;
+
+            @include tablet{
+                gap: 4px;
+            }
+
+            @include desktop{
+                gap: 4px;
+            }
         }
     
         &__comment{
@@ -62,16 +74,19 @@
             color: white;
             background-color: #0095FF;
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
             border: none;
             height: 40px;
             border-radius: 4px;
+            font-weight: $text-weight-buttons-m;
     
             @include tablet{
                 height: 40px;
                 width: 150px;
                 padding: 0 2rem 0 2rem;
+                border-radius: 4px;
+                font-weight: $text-weight-buttons;
     
             
                }
@@ -79,13 +94,30 @@
                 height: 40px;
                 width: 150px;
                 padding: 2rem;
+                font-weight: $text-weight-buttons;
+
                 }
         }
         
     
     
         &__title{
+            font-weight: $text-weight-labels-m;
             margin: 0;
+            color: $Silver;
+
+            @include tablet{
+                font-weight: $text-weight-labels;
+                margin: 0;
+            color: $Silver;
+            }
+
+
+            @include desktop{
+                font-weight: $text-weight-labels;
+                margin: 0;
+            color: $Silver;
+            }
         }
     
         &__input{
@@ -94,21 +126,30 @@
     
             @include tablet{
                 height: 40px;
-                width: 480px;
+                width: 30rem;
     
             
                }
                @include desktop{
                 height: 40px;
-                width: 480px;
+                width: 43.75rem;
                 }
         }
     
         @include tablet{
           align-items: center;
     gap: $Padding-before-headlines;
-    
-        
+    margin-bottom: $Padding-before-headlines;
            }
+
+           @include tablet{
+      margin-bottom: $Padding-before-headlines;
+             }
+
+&__icon{
+
+    margin-right: $Padding-after-headlines-m;
+}
+
     
     }
