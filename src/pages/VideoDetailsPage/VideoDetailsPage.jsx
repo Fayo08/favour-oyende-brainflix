@@ -1,27 +1,24 @@
 import React from 'react';
+import VideoDetails from '../../components/VideoDetails/VideoDetails';
+import Comments from '../../components/Comments/Comments';
+import VideoContainer from '../../components/VideoContainer/VideoContainer';
 
-function VideoDetailsPage(props) {
+function VideoDetailsPage() {
 
-    const [recipesData, setRecipesData] = useState([]);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const recipesResponse = await axios.get(`${API_URL}/filter.php?c=Seafood`);
-                console.log(recipesResponse)
-                setRecipesData(recipesResponse.data.meals);
-            } catch (err) {
-                console.log('Error fetching recipe data: ', err);
-            }
-        }
-        fetchData();
-
-    }, [])
-    return (
-        <div>
-            
-        </div>
+  
+  
+  return (
+    <>
+   <VideoDetails/>
+   <Comments/>
+   <VideoContainer/>
+   </>
+  
     );
-}
+  }
+  
+  
 
 export default VideoDetailsPage;
+

@@ -13,18 +13,16 @@ import { NavLink, Link } from "react-router-dom";
 
 function VideoContainer() {
   
-  const [videoList, setvideoList] = useState([]);
+  const [videoList, setVideoList] = useState([]);
   
 
   useEffect(() => {
     async function getVideo() {
       try {
         const response = await axios.get(`${API_URL}/videos?api_key=${API_KEY}`);
-        console.log(response)
-
-        
        
-        setvideoList(response.data)
+       
+        setVideoList(response.data)
       } catch (error) {
         console.log('API request error:\n', error)
       }
@@ -35,8 +33,8 @@ function VideoContainer() {
 
   
 
-  const filteredVideos = videoList.filter((video) => video.id !== '84e96018-4022-434e-80bf-000ce4cd12b8');
-console.log(...filteredVideos);
+  const filteredVideos = videoList.filter((video) => video.id !== videoList[0]?.id);
+
 
 
   if (!filteredVideos || filteredVideos.length === 0) {
@@ -47,21 +45,17 @@ console.log(...filteredVideos);
 
   return (
     <>
-    <div>
       <h3 className="article__subheader">Next Videos</h3>
       {filteredVideos.map((video) => (
-        <VideoItem
-          key={video.id}
-          className="article"
-          to={`/videos/${video.id}`}
-          {...video}
-          // handleClick={handleClick}
-        />
+        <NavLink key={video.id} className="article" to={`/videos/${video.id}`}>
+          <VideoItem {...video} />
+        </NavLink>
       ))}
-      </div>
     </>
   );
 }
 
 
 export default VideoContainer;
+
+

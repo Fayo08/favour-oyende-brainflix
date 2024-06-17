@@ -1,6 +1,7 @@
 import React from "react";
 import avatar from "../../assets/Images/Mohan-muruge.jpg";
 import viewsIcon from "../../assets/Icons/views.svg";
+import commentsIcon from '../../assets/Icons/add_comment.svg'
 import CommentItem from "../Comment Item/CommentItem";
 import { useState, useEffect } from 'react'
 import axios from "axios";
@@ -19,7 +20,7 @@ function Comments() {
           async function getComments() {
             try {
               const response = await axios.get(`${API_URL}/videos/84e96018-4022-434e-80bf-000ce4cd12b8/?api_key=${API_KEY}`);
-              console.log(response.data.comments)
+             
              
               setComments(response.data.comments)
             } catch (error) {
@@ -39,28 +40,29 @@ function Comments() {
    
   
 
-  console.log({comments})
 
   return (
     <article className="articles">
-      <img className="articles__avatar" src={avatar} alt="Avatar" />
-      <div className="articles__comment">
-        <div className="articles__separate">
-          <h3 className="articles__title">JOIN THE CONVERSATION</h3>
-
-          <textarea className="articles__input"></textarea>
-        </div>
+        <div className="articles__content">
+        <img className="articles__avatar" src={avatar} alt="Avatar" />
+<form className="articles__separate">
+  <div className="articles__form">
+    <label htmlFor="commentArea">JOIN THE CONVERSATION</label>
+    <textarea className="articles__input" placeholder="Add a new comment"></textarea>
+  </div>
         <button className="articles__button">
           <span>
             {" "}
-            <img src={viewsIcon} alt="Views Icon" />{" "}
+            <img src={commentsIcon} alt="Views Icon" />{" "}
           </span>
           COMMENT
         </button>
-      </div>
+        </form>
+        </div>
+      
 
 
-
+<div className="articles__comments">
       {comments && comments.length > 0 ? (
   comments.map((comment) => {
     return <CommentItem key={comment.id} {...comment} />;
@@ -68,6 +70,7 @@ function Comments() {
 ) : (
   <p>No comments available.</p>
 )}
+  </div>
      
     </article>
   );

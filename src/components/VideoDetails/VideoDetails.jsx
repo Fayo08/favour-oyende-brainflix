@@ -8,19 +8,29 @@ import './VideoDetails.scss'
 import playIcon from '../../assets/Icons/play.svg'
 import fullscreenIcon from '../../assets/Icons/fullscreen.svg'
 import volumeupIcon from '../../assets/Icons/volume_up.svg'
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+
+import axios from "axios";
+
+import { API_URL } from "../../../utils";
+import { API_KEY } from "../../../utils";
+
+
 
 
 
 function VideoDetails(props) {
+
   const { videoId } = useParams(); 
-  const [mainVideo, setmainVideo] = useState([]);
+ 
+  const [mainVideo, setmainVideo] = useState(null);
 
 
   useEffect(() => {
     async function getVideo() {
       try {
-        const response = await axios.get(`${API_URL}/videos/84e96018-4022-434e-80bf-000ce4cd12b8/?api_key=${API_KEY}/lookup.php?i=${videoId}`);
-        console.log(response.data)
+        const response = await axios.get(`${API_URL}/videos/${videoId}/?api_key=${API_KEY}/`);
        
          setmainVideo(response.data)
       } catch (error) {

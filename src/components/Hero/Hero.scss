@@ -7,6 +7,7 @@
 .mainvideo{
     margin-top: $Padding-before-headlines-m;
     margin-bottom: $Padding-before-headlines-m;
+    display: flex;
 
 &__player{
     width: 100%;
@@ -16,6 +17,19 @@
         position: relative;
         display: flex;
     justify-content: center;
+    flex-direction: column;
+
+    @include tablet{
+        flex-direction: column;
+
+         
+    }
+    @include desktop{
+     bottom: -29rem;
+     gap: 2rem;
+    
+     }
+
     }
 
     &--controlContainer{
@@ -23,12 +37,15 @@
         justify-content: space-around;
         align-items: center;
         position: absolute;
-        top: 7rem;
+        position: absolute;
+        top: 8rem;
+        left: .2rem;
         gap: .5rem;
 
 
     @include tablet{
-        bottom: -15rem;
+        bottom: 5rem;
+        left: 2rem;
         gap: 3rem;
 
          
@@ -77,13 +94,25 @@
             @include desktop{
                 width: 800px;
              }
+
+             &--scrublines{
+               color: white;
+    
+               
         }
     }
+}
+
+
+&__title{
+    font-weight: 800;
 }
 
 &__timestamp{
     color: $Silver;
 }
+
+
 
 &__content{
     display: flex;
@@ -102,6 +131,9 @@
             display: flex;
             justify-content: space-between;
         }
+
+
+
 
     &--one, &--two{
 
@@ -142,6 +174,16 @@
     color: $Silver;
     }
 }
+@include tablet{
+   flex-direction: column;
+    align-items: center;
+
+
+   }
+   @include desktop{
+        flex-direction: column;
+        align-items: center;
+    }
 
 }
 
@@ -235,9 +277,10 @@ margin-bottom: $Padding-between-components-m;
 
     @include tablet{
       align-items: center;
-gap: $Padding-before-headlines;
+    gap: $Padding-before-headlines;
 
     
        }
 
+}
 }

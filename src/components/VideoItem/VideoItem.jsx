@@ -13,7 +13,7 @@ function VideoItem({ id, title, video, channel, image, handleClick} ) {
             <ul className="article__list">
                 </ul>
 
-        <li  className='video' onClick={() => handleClick(id)}>
+        <li  className='video' >
         <video className='video__thumbnail' poster={image} src={video} ></video>
         <div className='video__info'>
       <h3 className='video__title' >{title}</h3 >

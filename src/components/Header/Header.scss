@@ -3,16 +3,13 @@
 @use "../../styles/partials/typography" as *;
 
 
-*{
-    font-family: 'Avenir Next LT Regular';
-  }
+
 
 .Header {
    
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
     gap: $Padding-between-components-m;
-    font-family: 'Avenir Next LT Regular';
     justify-content: center;
     padding: $Padding-between-components-m;
     
@@ -40,13 +37,65 @@
         
     }
     
-    &__containerSearch{
-        display: flex;
-    }
-    
-   
-    
 
+
+&__form {
+   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: $Padding-between-components-m;
+
+
+
+    &--icon{
+        position: absolute;
+        top: 26%;
+        right: 10px;
+        
+        @include tablet{
+            top: 26%;
+            left: 213px;
+        }
+
+        @include desktop{
+
+        }
+      
+    }
+
+    &--control{
+        width: 240px;
+        height: 36px;
+        border: 1px solid $Mercury;
+        border-radius: $border-radius ;
+    
+        @include tablet{
+            width: 240px;
+            height: 40px;
+            
+        }
+    
+        @include desktop{
+            width: 240px;
+            height: 40px;
+            
+        }
+    }
+
+    @include tablet{
+      flex-direction: row;
+        
+    }
+
+    @include desktop{
+        flex-direction: row;
+    }
+
+
+}
+    
+    
 
     &__avatar{
         width: 36px;
@@ -60,21 +109,39 @@
         color: white;
         background-color: $BrainFlix-blue;
         display: flex;
-        justify-content: space-around;
+        justify-content: left;
         align-items: center;
         border: none;
         height: 40px;
         border-radius: $border-radius;
+
+        @include tablet{
+            padding-left: 32px;
+            padding-right: 32px;
+            justify-content: left;
+
+              
+          }
+      
+          @include desktop{
+              flex-direction: row;
+          }
+
+
+        &--icon{
+            margin-right: 70px;
+        }
     }
 
     &__content{
         gap: $Padding-between-components-m;
         display: flex;
+       
         
 
         @include tablet{
             display: flex;
-            
+            width: fit-content;
         }
     }
     
@@ -82,13 +149,26 @@
     @include tablet{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: left;
+        padding: $Padding-between-components $Padding-before-headlines  $Padding-between-components $Padding-before-headlines;
     }
 
     @include desktop{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         padding: $Padding-between-components $Padding-before-headlines   $Padding-between-components $Padding-before-headlines;
     }
 }
+
+
+
+   
+
+
+
+
+
+
+
+
