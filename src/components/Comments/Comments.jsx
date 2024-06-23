@@ -1,13 +1,4 @@
-<<<<<<< Updated upstream
-import React from 'react';
 
-function Comments(props) {
-    return (
-        <div>
-            
-        </div>
-    );
-=======
 import React from "react";
 import avatar from "../../assets/Images/Mohan-muruge.jpg";
 import viewsIcon from "../../assets/Icons/views.svg";
@@ -60,7 +51,7 @@ function Comments({mainVideo}) {
       </div>
     </article>
   );
->>>>>>> Stashed changes
+
 }
 
 export default Comments;
