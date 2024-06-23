@@ -2,44 +2,40 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
+<<<<<<< Updated upstream
+=======
+.article {
+  text-decoration: none;
+  color: $BrainFlix-black;
 
-.article{
+  &__subheader {
+    color: $Silver;
+    font-weight: $text-weight-subheader-m;
 
-    text-decoration: none;
-    color: $BrainFlix-black;
-
-    &__subheader{
-        color: $Silver;
-        font-weight: $text-weight-subheader-m;
-
-        @include tablet{
-            font-weight: $text-weight-subheader;
-        }
-
-        @include desktop{
-            font-weight: $text-weight-subheader;
-        }
+    @include tablet {
+      font-weight: $text-weight-subheader;
     }
 
-    
-
-    &__list{
-        margin: 0;
-        padding: 0;
+    @include desktop {
+      font-weight: $text-weight-subheader;
     }
+  }
+>>>>>>> Stashed changes
+
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
 }
 
+.Next-videos-container {
+  padding: 0 $Padding-between-components-m 0 $Padding-between-components-m;
 
+  @include tablet {
+    padding: 0 $Padding-between-components 0 $Padding-between-components;
+  }
 
-.Next-videos-container{
-
-    padding: 0 $Padding-between-components-m 0 $Padding-between-components-m;
-
-    @include tablet{
-        padding: 0 $Padding-between-components 0 $Padding-between-components; 
-    }
-
-    @include desktop{
-        padding: 0 $Padding-between-components 0 $Padding-between-components;
-    }
+  @include desktop {
+    padding: 0 $Padding-between-components 0 $Padding-between-components;
+  }
 }

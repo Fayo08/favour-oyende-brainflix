@@ -3,34 +3,30 @@
 @use "../../styles/partials/typography" as *;
 
 
-.aside{
-@include desktop {
+
+main{
+  box-sizing: border-box;
+}
+.aside {
+  @include desktop {
     display: block;
     width: 300px;
     padding: 20px;
     background-color: #f4f4f4;
     border-left: 1px solid #ddd;
+  }
 }
-}
 
-.Padding_homepage{
-
-
-@include desktop{
+.Padding_homepage {
+  @include desktop {
     padding: $Padding-before-headlines;
     display: flex;
     flex-direction: row;
-    
+  }
 }
 
-}
-
-
-
-.hero-comments-container{
-    
-    @include desktop{
+.hero-comments-container {
+  @include desktop {
     width: 60%;
-
-    }
+  }
 }
