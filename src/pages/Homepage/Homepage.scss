@@ -1,0 +1,32 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+
+
+main{
+  box-sizing: border-box;
+}
+.aside {
+  @include desktop {
+    display: block;
+    width: 300px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-left: 1px solid #ddd;
+  }
+}
+
+.Padding_homepage {
+  @include desktop {
+    padding: $Padding-before-headlines;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.hero-comments-container {
+  @include desktop {
+    width: 60%;
+  }
+}

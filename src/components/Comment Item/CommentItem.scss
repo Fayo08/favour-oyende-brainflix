@@ -7,9 +7,9 @@
 .comment{
     
   display: flex;
-  gap: $Padding-before-headlines;
-    border-bottom: 1px  solid $Mercury;
-    margin-top: $Padding-after-headlines-m;
+  gap: $Padding-between-components-m;
+  border-bottom: 1px solid $Mercury;
+  margin-top: $Padding-after-headlines-m;
 
     &__placeholderImg{
         border-radius: 50%;
@@ -19,37 +19,52 @@
 
     }
 
-    &__info{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
-        width: 70%;
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
 
-        &--details{
-            display: flex;
-            align-self: flex-start;
-            gap: $Padding-before-headlines-m;
+    &--details {
+      display: flex;
+      align-self: flex-start;
+      gap: $Padding-before-headlines-m;
 
-            @include tablet{
-                gap: 300px;
-    
-            
-               }
-               @include desktop{
-                    
-                }
-        }
-    
+      @include tablet {
+        gap: 300px;
+      }
+      @include desktop {
+        gap: 300px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: $text-weight-subheader-m;
+
+    @include tablet {
+      font-weight: $text-weight-subheader;
     }
 
-    &__title{
-        margin: 0;
+    @include desktop {
+      font-weight: $text-weight-subheader;
     }
+  }
 
+  &__date {
+    color: $Silver;
+    margin: 0;
+  }
 
-    &__date{
-        color: $Silver;
-        margin: 0;
-    }
+  @include tablet {
+    margin-top: $Padding-after-headlines;
+    justify-content: center;
+  }
+
+  @include desktop {
+    margin-top: $Padding-after-headlines;
+    justify-content: center;
+  }
 }

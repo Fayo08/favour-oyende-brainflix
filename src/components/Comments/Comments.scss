@@ -2,105 +2,134 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
+.articles {
+  margin-top: $Padding-between-components-m;
+  margin-bottom: $Padding-between-components-m;
+  padding: 0 $Padding-after-headlines-m 0 $Padding-after-headlines-m;
 
 
+  &__avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
+  &__content {
+    display: flex;
+    gap: $Padding-between-components-m;
+  }
 
-.articles{
+  &__separate {
+    display: flex;
+    flex-direction: column;
+    gap: $Padding-before-headlines-m;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 1rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    @include tablet {
+      gap: 4px;
+    }
+
+    @include desktop {
+      gap: 4px;
+    }
+  }
+
+  &__comment {
     display: flex;
     flex-direction: column;
     gap: $Padding-between-components-m;
-    margin-top: $Padding-between-components-m;
-    margin-bottom: $Padding-between-components-m;
-    
-    
-        &__avatar{
-            width: 36px;
-                height: 36px;
-                border-radius: 50%; 
-        }
-        
-    
-        &__separate{
-    
-            @include tablet{
-                display: flex;
-                flex-direction:column;
-    
-            
-               }
-        }
-    
-        &__comment{
-            display: flex;
-            flex-direction: column;
-            gap: $Padding-between-components-m;
-    
-            @include tablet{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-    
-            
-               }
-               @include desktop{
-                    
-                }
-        }
-    
-        &__button{
-            width: 100%;
-            color: white;
-            background-color: #0095FF;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: none;
-            height: 40px;
-            border-radius: 4px;
-    
-            @include tablet{
-                height: 40px;
-                width: 150px;
-                padding: 2rem;
-    
-            
-               }
-               @include desktop{
-                height: 40px;
-                width: 150px;
-                padding: 2rem;
-                }
-        }
-        
-    
-    
-        &__title{
-            margin: 0;
-        }
-    
-        &__input{
-        
-            height: 50px;
-    
-            @include tablet{
-                height: 40px;
-                width: 240px;
-    
-            
-               }
-               @include desktop{
-                height: 40px;
-                width: 240px;
-                }
-        }
-    
-        @include tablet{
-            flex-direction: column;
-          align-items: center;
-    gap: $Padding-before-headlines;
-    
-        
-           }
-    
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
     }
-    
+    @include desktop {
+    }
+  }
+
+  &__button {
+    width: 100%;
+    color: white;
+    background-color: #0095ff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+    height: 40px;
+    border-radius: 4px;
+    font-weight: $text-weight-buttons-m;
+
+    @include tablet {
+      height: 40px;
+      width: 150px;
+      padding: 0 2rem 0 2rem;
+      border-radius: 4px;
+      font-weight: $text-weight-buttons;
+    }
+    @include desktop {
+      height: 40px;
+      width: 150px;
+      padding: 2rem;
+      font-weight: $text-weight-buttons;
+    }
+  }
+
+  &__title {
+    font-weight: $text-weight-labels-m;
+    margin: 0;
+    color: $Silver;
+
+    @include tablet {
+      font-weight: $text-weight-labels;
+      margin: 0;
+      color: $Silver;
+    }
+
+    @include desktop {
+      font-weight: $text-weight-labels;
+      margin: 0;
+      color: $Silver;
+    }
+  }
+
+  &__input {
+    height: 50px;
+
+    @include tablet {
+      height: 40px;
+      width: 30rem;
+    }
+    @include desktop {
+      height: 40px;
+      width: 43.75rem;
+    }
+  }
+
+  @include tablet {
+    align-items: center;
+    gap: $Padding-before-headlines;
+    margin-bottom: $Padding-before-headlines;
+  }
+
+  @include tablet {
+    margin-bottom: $Padding-before-headlines;
+  }
+
+  &__icon {
+    margin-right: $Padding-after-headlines-m;
+  }
+}
+
+

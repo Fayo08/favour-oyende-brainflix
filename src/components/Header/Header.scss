@@ -2,26 +2,39 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
-
-*{
-    font-family: 'Avenir Next LT Regular';
-  }
-
 .Header {
-   
   display: flex;
   flex-direction: column;
-    gap: $Padding-between-components-m;
-    font-family: 'Avenir Next LT Regular';
-    justify-content: center;
-    padding: $Padding-between-components-m;
-    
+  gap: $Padding-between-components-m;
+  justify-content: center;
+  align-items: center;
+  padding: $Padding-between-components-m;
 
-    &__logo{
-        width: 120px;
-        height: 25px;
-        align-self: center;
+  &__group{
+    display: flex;
+  }
+
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+
+
+    @include tablet {
+    
+      flex-direction: row;
     }
+    @include desktop {
+
+      flex-direction: row;
+    }
+  }
+  
+
+  &__logo {
+    width: 120px;
+    height: 25px;
+  }
 
     &__container{
         display: flex;
@@ -29,66 +42,116 @@
         flex-direction: column;
         gap: 4px ;
 
-        @include tablet{
-           display: flex;
-        flex-direction: row;
-        }
-        @include desktop{
-            display: flex;
-         flex-direction: row;
-         }
-        
+    @include tablet {
+      display: flex;
+      flex-direction: row;
     }
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+    }
+  }
 
-    &__containerSearch{
-        display: flex;
-    }
+  &__form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: $Padding-between-components-m;
     
+
    
-    }
 
+    &__control {
+      width: 204px;
+      height: 36px;
+      border: 1px solid $Mercury;
+      border-radius: $border-radius;
+      padding: 0 $Padding-before-headlines ;
+      background: url('../../assets/Icons/search.svg')  no-repeat 10px center;
+   
 
-    &__avatar{
-        width: 36px;
-        height: 36px;
-        border-radius: 50%; 
-    }
-
-
-    &__upload{
-        width: 100%;
-        color: white;
-        background-color: $BrainFlix-blue;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        border: none;
+      @include tablet {
+        width: 240px;
         height: 40px;
-        border-radius: $border-radius;
+      }
+
+      @include desktop {
+        width: 240px;
+        height: 40px;
+      }
     }
 
-    &__content{
-        gap: $Padding-between-components-m;
-        display: flex;
-        
-
-        @include tablet{
-            display: flex;
-            
-        }
-    }
-    
-
-    @include tablet{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+    @include tablet {
+      flex-direction: row;
     }
 
-    @include desktop{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: $Padding-between-components $Padding-before-headlines   $Padding-between-components $Padding-before-headlines;
+    @include desktop {
+      flex-direction: row;
     }
+  }
+
+  &__avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
+
+  &__upload {
+    width: 100%;
+    color: white;
+    background-color: $BrainFlix-blue;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border: none;
+    height: 40px;
+    border-radius: $border-radius;
+    font-weight: $text-weight-buttons-m;
+
+    @include tablet {
+      padding-left: 32px;
+      padding-right: 32px;
+      justify-content: left;
+    }
+
+    @include desktop {
+      flex-direction: row;
+    }
+
+    &--icon {
+      margin-right: 70px;
+    }
+  }
+
+  &__content {
+    gap: $Padding-between-components-m;
+    display: flex;
+
+    @include tablet {
+      display: flex;
+      width: fit-content;
+    }
+
+    @include tablet {
+      display: flex;
+      width: fit-content;
+      gap: 3rem;
+    }
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: $Padding-between-components $Padding-before-headlines
+      $Padding-between-components $Padding-before-headlines;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: $Padding-between-components $Padding-before-headlines
+      $Padding-between-components $Padding-before-headlines;
+  }
 }
