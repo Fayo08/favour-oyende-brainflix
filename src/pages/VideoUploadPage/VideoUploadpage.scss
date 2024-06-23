@@ -2,195 +2,175 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
-.video-upload-container{
+.video-upload-container {
+  padding: $Padding-between-components-m;
+  @include tablet {
+    padding: $Padding-between-components;
+  }
 
-    padding: $Padding-between-components-m;
-    @include tablet{
-       
-    padding: $Padding-between-components; 
-    }
-
-    @include desktop{
-       
-        padding: $Padding-before-headlines; 
-        }
+  @include desktop {
+    padding: $Padding-before-headlines;
+  }
 }
 .form {
-
-    @include desktop{
-        width: 100%
-    }
-}
-.borders{
-    border-top: 1px solid $Mercury;
-    border-bottom: 1px solid $Mercury;
-    margin-bottom: $Padding-after-headlines-m;
-
-    @include tablet{
-        margin-bottom: $Padding-after-headlines;
-    }
-
-    @include desktop{
-        margin-bottom: $Padding-after-headlines;
-        display: flex;
-        flex-direction: row;
-
-    }
-
-}
-
-.Upload_title{
-font-weight: 700;
-
-
-
-@include tablet{
-    font-weight: 700;
-}
-
-@include desktop{
-    font-weight: 700;
-}
-
-
-
-
-}
-
-.label{
-    color: $Silver;
-    font-weight: 600;
-}
-
-.Video_thumbnail{
-    font-weight: 600;
-    color: silver;
-}
-
-.form_group{
-display: flex;
-flex-direction: column;
-gap: .25rem;
-margin-top: $Padding-after-headlines-m;
-margin-bottom: $Padding-before-headlines-m;
-}
-
-
-.img_upload{
+  @include desktop {
     width: 100%;
+  }
+}
+.borders {
+  border-top: 1px solid $Mercury;
+  border-bottom: 1px solid $Mercury;
+  margin-bottom: $Padding-after-headlines-m;
 
-    @include tablet{
-         width: 50%;
-    }
+  @include tablet {
+    margin-bottom: $Padding-after-headlines;
+  }
 
-    @include desktop{
-        width: 50%;
-   }
+  @include desktop {
+    margin-bottom: $Padding-after-headlines;
+    display: flex;
+    flex-direction: row;
+  }
 }
 
-.form_control_1{
-    height: 36px;
-    width: 240px;
-    border: 1px solid $Silver;
-    background-color: $Mercury;
-    border-radius: $border-radius;
-    padding: 12px;
+.Upload_title {
+  font-weight: 700;
 
-    background-color: $Alabaster;
+  @include tablet {
+    font-weight: 700;
+  }
 
-    @include tablet{
-        height: 2.5rem;
+  @include desktop {
+    font-weight: 700;
+  }
+}
+
+.label {
+  color: $Silver;
+  font-weight: 600;
+}
+
+.Video_thumbnail {
+  font-weight: 600;
+  color: silver;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: $Padding-after-headlines-m;
+  margin-bottom: $Padding-before-headlines-m;
+}
+
+.img_upload {
+  width: 100%;
+
+  @include tablet {
+    width: 50%;
+  }
+
+  @include desktop {
+    width: 50%;
+  }
+}
+
+.form_control_1 {
+  height: 36px;
+  width: 240px;
+  border: 1px solid $Silver;
+  background-color: $Mercury;
+  border-radius: $border-radius;
+  padding: 12px;
+
+  background-color: $Alabaster;
+
+  @include tablet {
+    height: 2.5rem;
     padding: 16px;
     width: 100%;
+  }
 
-    }
-
-    @include desktop{
-        height: 2.5rem;
+  @include desktop {
+    height: 2.5rem;
     padding: 16px;
     width: 50rem;
-
-    }
+  }
 }
 
-.form_control_2{
-    height: 36px;
-    width: 240px;
-    border: 1px solid $Silver;
-    padding: 12px;
-    border-radius: $border-radius;
-    background-color: $Mercury;
+.form_control_2 {
+  height: 36px;
+  width: 240px;
+  border: 1px solid $Silver;
+  padding: 12px;
+  border-radius: $border-radius;
+  background-color: $Mercury;
 
-    @include tablet{
-        height: 2.5rem;
-        width: 100%;
-    }
-
-    @include desktop{
-        height: 2.5rem;
-        width: 50rem;
-    }
-}
-
-.upload-button{
+  @include tablet {
+    height: 2.5rem;
     width: 100%;
-        color: white;
-        background-color: $BrainFlix-blue;
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        border: none;
-        height: 40px;
-        border-radius: $border-radius;
-        margin-bottom: $Padding-after-headlines-m;
-        font-weight: 600;
+  }
 
-        @include tablet{
-            width: 9.375rem;
-            justify-content: left;
-        }
-    
-        @include desktop{
-            width: 9.375rem;
-        }
+  @include desktop {
+    height: 2.5rem;
+    width: 50rem;
+  }
 }
 
-.publish-icon{
-    margin-right: 5.5rem;
-    
-    @include tablet{
-        margin-right: 2rem;
-    }
+.upload-button {
+  width: 100%;
+  color: white;
+  background-color: $BrainFlix-blue;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border: none;
+  height: 40px;
+  border-radius: $border-radius;
+  margin-bottom: $Padding-after-headlines-m;
+  font-weight: 600;
 
-    @include desktop{
-        margin-right: 2rem;
-    }
+  @include tablet {
+    width: 9.375rem;
+    justify-content: left;
+  }
 
+  @include desktop {
+    width: 9.375rem;
+  }
 }
 
-.Cancel_button{
-    text-align: center;
-    color: $BrainFlix-blue;
-    font-weight: 600;
+.publish-icon {
+  margin-right: 5.5rem;
 
+  @include tablet {
+    margin-right: 2rem;
+  }
 
+  @include desktop {
+    margin-right: 2rem;
+  }
 }
 
-.buttons{
+.Cancel_button {
+  text-align: center;
+  color: $BrainFlix-blue;
+  font-weight: 600;
+}
 
-    @include tablet{
-        display: flex;
-        flex-direction: row-reverse;
-        gap: 32px;
-        align-items: center;
+.buttons {
+  @include tablet {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 32px;
+    align-items: center;
+  }
 
-    }
-
-    @include desktop{
-        display: flex;
-        height: 2.5rem;
-        flex-direction: row-reverse;
-        gap: 2rem;
-        align-items: center;
-    }
+  @include desktop {
+    display: flex;
+    height: 2.5rem;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    align-items: center;
+  }
 }
