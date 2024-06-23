@@ -2,7 +2,7 @@ import VideoThumbnail from "../../assets/Images/Upload-video-preview.jpg";
 import publishIcon from "../../assets/Icons/publish.svg";
 
 import "./VideoUploadpage.scss";
-function VideoUploadPage({handleSubmit}) {
+function VideoUploadPage({handleSubmit, title}) {
   return (
     <div className="video-upload-container">
       <h2 className="Upload_title">Upload Video</h2>
@@ -26,6 +26,7 @@ function VideoUploadPage({handleSubmit}) {
               type="text"
               name="title"
               id="title"
+              value={title}
               className="form_control_1"
               placeholder="Add a title to your video"
             />
@@ -37,6 +38,7 @@ function VideoUploadPage({handleSubmit}) {
             <input
               type="text"
               name="description"
+              value={title}
               id="description"
               className="form_control_2"
               placeholder="Add a description to your video"

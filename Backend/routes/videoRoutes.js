@@ -36,7 +36,6 @@ function readData() {
 router.post("/", (req, res) => {
     
     const newVideo = {
-      id: crypto.randomUUID(),
       title: req.body.title,
       description: req.body.description
     };

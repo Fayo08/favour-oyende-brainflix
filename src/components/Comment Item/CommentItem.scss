@@ -7,15 +7,9 @@
 .comment{
     
   display: flex;
-<<<<<<< Updated upstream
-  gap: $Padding-before-headlines;
-    border-bottom: 1px  solid $Mercury;
-    margin-top: $Padding-after-headlines-m;
-=======
   gap: $Padding-between-components-m;
   border-bottom: 1px solid $Mercury;
   margin-top: $Padding-after-headlines-m;
->>>>>>> Stashed changes
 
     &__placeholderImg{
         border-radius: 50%;

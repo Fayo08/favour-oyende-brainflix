@@ -7,23 +7,6 @@ function VideoItem({ title, video, channel, image }) {
     <>
       <ul className="article__list"></ul>
 
-<<<<<<< Updated upstream
-    return (
-      <>
-      
-            <ul className="article__list">
-                </ul>
-
-        <li  className='video' >
-        <video className='video__thumbnail' poster={image} src={video} ></video>
-        <div className='video__info'>
-      <h3 className='video__title' >{title}</h3 >
-      <p  className='video__name' >{channel}</p>
-
-      </div>
-      
-    </li>
-=======
       <li className="video">
         <video className="video__thumbnail" poster={image} src={video}></video>
         <div className="video__info">
@@ -31,7 +14,6 @@ function VideoItem({ title, video, channel, image }) {
           <p className="video__name">{channel}</p>
         </div>
       </li>
->>>>>>> Stashed changes
     </>
   );
 }

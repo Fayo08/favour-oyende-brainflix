@@ -37,6 +37,7 @@ function App() {
     try{
       await axios.post(API_URL + "/videos", {
         title: e.target.name.value,
+        description: e.target.description.value,
       });
       setTitle('');
       console.log(API_URL + "/videos");
@@ -60,8 +61,8 @@ console.log(e.target.name.value);
         <Header />
 
         <Routes>
-          <Route path="/" element={<Homepage videoList={videoList} mainVideo={mainVideo}/>} />
-          <Route path="/upload" element={<VideoUploadPage handleSubmit={handleSubmit}  />} />
+        <Route path="/" element={<Homepage videoList={videoList} mainVideo={mainVideo}  />} />
+          <Route path="/upload" element={<VideoUploadPage handleSubmit={handleSubmit} title={title} />} />
           <Route path="/videos/:videoId" element={<Homepage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

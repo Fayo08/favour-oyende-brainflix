@@ -2,8 +2,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
-<<<<<<< Updated upstream
-=======
 .article {
   text-decoration: none;
   color: $BrainFlix-black;
@@ -20,7 +18,6 @@
       font-weight: $text-weight-subheader;
     }
   }
->>>>>>> Stashed changes
 
   &__list {
     margin: 0;
