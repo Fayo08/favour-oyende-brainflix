@@ -57,9 +57,9 @@ function Homepage({}) {
 
           <Comments mainVideo={mainVideo} />
         </div>
-        <div className="video-container">
+        <aside className="sidebar">
           <VideoContainer videoList={videoList} videoId={videoId} />
-        </div>
+        </aside>
       </div>
     </main>
   );

@@ -14,6 +14,9 @@
     @include tablet {
       width: 20%;
     }
+    @include desktop {
+      width: 10%;
+    }
   }
 
   &__placeholderImg {
