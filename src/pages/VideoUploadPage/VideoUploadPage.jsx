@@ -46,7 +46,7 @@ function VideoUploadPage({}) {
     }
   };
   return (
-    <div className="videoUpload">
+    <main className="videoUpload">
       <h1 className="videoUpload__title">Upload Video</h1>
 
       <div className="videoUpload__borders">
@@ -107,7 +107,7 @@ function VideoUploadPage({}) {
         </form>
       </div>
 
-    </div>
+    </main>
   );
 }
 

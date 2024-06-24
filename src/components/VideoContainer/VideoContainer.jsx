@@ -1,6 +1,6 @@
 import VideoItem from "../VideoItem/VideoItem";
 
-// import VideoDetails from "../VideoDetails/VideoDetails";
+
 import "./VideoContainer.scss";
 
 import { NavLink } from "react-router-dom";
@@ -18,7 +18,7 @@ function VideoContainer({ videoList, videoId }) {
 
   return (
     <>
-      <div className="Next-videos-container">
+      <main className="Next-videos-container">
         <h3 className="article__subheader">NEXT VIDEOS</h3>
         {filteredVideos.map((video) => (
           <NavLink
@@ -29,7 +29,7 @@ function VideoContainer({ videoList, videoId }) {
             <VideoItem {...video} videoId={videoId} />
           </NavLink>
         ))}
-      </div>
+      </main>
     </>
   );
 }

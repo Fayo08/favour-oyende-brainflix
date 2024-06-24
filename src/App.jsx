@@ -1,11 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Homepage from "./pages/Homepage/Homepage";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import "./App.scss";
 import VideoUploadPage from "./pages/VideoUploadPage/VideoUploadPage";
-// import VideoDetailsPage from "./pages/VideoDetailsPage/VideoDetailsPage";
+
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 function App() {

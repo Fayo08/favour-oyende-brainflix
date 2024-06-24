@@ -10,7 +10,7 @@ function HeroDetails({ mainVideo }) {
 
   const newTimestamp = new Date(timestamp).toLocaleDateString();
   return (
-    <div className="mainvideo-container">
+    <main className="mainvideo-container">
       <h2 className="mainvideo__title"> {title} </h2>
       <div className="mainvideo__content">
         <div className="mainvideo__content1">
@@ -34,7 +34,7 @@ function HeroDetails({ mainVideo }) {
       </div>
       <p> {description} </p>
       <h3 className="mainvideo__comments">3 comments</h3>
-    </div>
+    </main>
   );
 }
 

@@ -16,7 +16,7 @@ function Comments({mainVideo}) {
   }
 
   return (
-    <article className="articles">
+    <main className="articles">
       <div className="articles__content">
         <img className="articles__avatar" src={avatar} alt="Avatar" />
         <form className="articles__separate">
@@ -48,7 +48,7 @@ function Comments({mainVideo}) {
           <p>No comments available.</p>
         )}
       </div>
-    </article>
+    </main>
   );
 }
 

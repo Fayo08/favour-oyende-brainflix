@@ -7,7 +7,7 @@ function CommentItem(props) {
   const newTimestamp = new Date(timestamp).toLocaleDateString();
   return (
     <>
-      <div className="comment">
+      <main className="comment">
         <div className="comment__placeholder"> <div className="comment__placeholderImg"></div></div>
         <div className="comment__info">
           <div className="comment__info--details">
@@ -17,7 +17,7 @@ function CommentItem(props) {
           </div>
           <p className="comment__date">{newTimestamp} </p>
         </div>
-      </div>
+      </main>
     </>
   );
 }

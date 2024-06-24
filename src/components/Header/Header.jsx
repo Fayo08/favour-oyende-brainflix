@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <div className="Header">
+    <main className="Header">
       <Link to="/">
         <img src={playIcon} alt="logo" className="Header__logo" />
       </Link>
@@ -47,7 +47,7 @@ const Header = () => {
         </div>
         </div>
      
-    </div>
+    </main>
   );
 };
 

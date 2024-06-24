@@ -19,7 +19,7 @@ function Hero({mainVideo}) {
 
 
   return (
-    <article className="mainvideo">
+    <main className="mainvideo">
       <div className="mainvideo__player--container">
         <video
           className="mainvideo__player"
@@ -28,7 +28,7 @@ function Hero({mainVideo}) {
           src={video}
         />
       </div>
-    </article>
+    </main>
   );
 }
 

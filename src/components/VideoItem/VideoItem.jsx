@@ -10,7 +10,8 @@ function VideoItem({ title, video, channel, image, videoId }) {
   };
 
   return (
-    <>
+    < main>
+    
       <ul className="article__list"></ul>
 
       <li className="video" onClick={handleVideoClick}>
@@ -20,7 +21,7 @@ function VideoItem({ title, video, channel, image, videoId }) {
           <p className="video__name">{channel}</p>
         </div>
       </li>
-    </>
+    </main>
   );
 }
 
