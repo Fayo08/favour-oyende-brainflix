@@ -9,31 +9,34 @@
   justify-content: center;
   align-items: center;
   padding: $Padding-between-components-m;
+  box-sizing: border-box;
 
   &__group{
     display: flex;
+    gap: 1rem;
+
   }
-
-
-  &__content{
+  
+  &__content {
+    gap: $Padding-between-components-m;
     display: flex;
     flex-direction: column;
 
-
     @include tablet {
-    
       flex-direction: row;
+      gap: 1rem;
+      width: fit-content;
     }
-    @include desktop {
 
-      flex-direction: row;
+    @include desktop {
+     
+      width: fit-content;
+     
     }
   }
-  
-
   &__logo {
-    width: 120px;
-    height: 25px;
+    width: 7.5rem;
+    height: 1.5625rem;
   }
 
     &__container{
@@ -67,12 +70,14 @@
       border: 1px solid $Mercury;
       border-radius: $border-radius;
       padding: 0 $Padding-before-headlines ;
+      background-color: $Alabaster;
       background: url('../../assets/Icons/search.svg')  no-repeat 10px center;
    
 
       @include tablet {
         width: 240px;
         height: 40px;
+        background-color: $Alabaster;
       }
 
       @include desktop {
@@ -123,28 +128,13 @@
     }
   }
 
-  &__content {
-    gap: $Padding-between-components-m;
-    display: flex;
 
-    @include tablet {
-      display: flex;
-      width: fit-content;
-    }
-
-    @include tablet {
-      display: flex;
-      width: fit-content;
-      gap: 3rem;
-    }
-  }
 
   @include tablet {
     display: flex;
     flex-direction: row;
     justify-content: left;
-    padding: $Padding-between-components $Padding-before-headlines
-      $Padding-between-components $Padding-before-headlines;
+   
   }
 
   @include desktop {

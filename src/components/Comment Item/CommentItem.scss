@@ -11,6 +11,14 @@
   border-bottom: 1px solid $Mercury;
   margin-top: $Padding-after-headlines-m;
 
+  &__placeholder{
+    width: 100%;
+
+    @include tablet {
+      width: 20%;
+    }
+  }
+
     &__placeholderImg{
         border-radius: 50%;
         background-color: $Mercury;
@@ -21,21 +29,25 @@
 
   &__info {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    width: 70%;
+    // justify-content: space-between;
+    // align-items: center;
+    // flex-direction: column;
+    // width: 70%;
+
+    // @include tablet{
+    //   width: ;
+    // }
 
     &--details {
       display: flex;
-      align-self: flex-start;
-      gap: $Padding-before-headlines-m;
+      
+      flex-direction: column;
 
       @include tablet {
-        gap: 300px;
+        
       }
       @include desktop {
-        gap: 300px;
+       
       }
     }
   }
@@ -60,11 +72,11 @@
 
   @include tablet {
     margin-top: $Padding-after-headlines;
-    justify-content: center;
+  
   }
 
   @include desktop {
     margin-top: $Padding-after-headlines;
-    justify-content: center;
+
   }
 }

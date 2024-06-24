@@ -1,8 +1,50 @@
 import VideoThumbnail from "../../assets/Images/Upload-video-preview.jpg";
 import publishIcon from "../../assets/Icons/publish.svg";
+import {  useState } from "react";
+import axios from "axios";
 
 import "./VideoUploadpage.scss";
-function VideoUploadPage({ handleInputChange, values, handleSubmit}) {
+function VideoUploadPage({}) {
+  const API_URL = "http://localhost:8080";
+
+  const intialValues = {
+    title: "",
+    description: "",
+  };
+
+  const [values, setValues] = useState(intialValues);
+
+  
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      
+      await axios.post(API_URL + "/videos", {
+        title: values.title,
+        description: values.description,
+      });
+      setValues({ title: "", description: "" });
+
+      console.log(API_URL + "/videos");
+      console.log(e.target.name.value);
+
+      await fetchVideos();
+
+      e.target.reset();
+    } catch (error) {
+      console.error(error);
+    }
+  };
   return (
     <div className="video-upload-container">
       <h2 className="Upload_title">Upload Video</h2>
@@ -48,24 +90,21 @@ function VideoUploadPage({ handleInputChange, values, handleSubmit}) {
           </div>
 
           <div className="buttons">
-        <button type="submit" className="upload-button">
-          <span>
-            <img
-              className="publish-icon"
-              src={publishIcon}
-              alt="publish Icon"
-            />
-          </span>
-          PUBLISH   </button>
-        </div>
+            <button type="submit" className="upload-button">
+              <span>
+                <img
+                  className="publish-icon"
+                  src={publishIcon}
+                  alt="publish Icon"
+                />
+              </span>
+              PUBLISH{" "}
+            </button>
+          </div>
         </form>
       </div>
-     
-    
-      
 
-        <div className="Cancel_button">CANCEL</div>
-      
+      <div className="Cancel_button">CANCEL</div>
     </div>
   );
 }

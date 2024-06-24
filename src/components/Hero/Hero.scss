@@ -7,6 +7,10 @@
   margin-bottom: $Padding-before-headlines-m;
   display: flex;
 
+  &__player{
+    width: 100%;
+  }
+
     &--controlContainer {
       display: flex;
       justify-content: space-around;
@@ -36,33 +40,8 @@
       padding: 6px;
       border-radius: $border-radius;
 
-      &--scrub {
-        background-color: $BandSite-Darkblack-overlay;
-        align-items: center;
-        display: flex;
-        height: 30px;
-        padding-left: 6px;
-        padding-right: 6px;
-        border-radius: $border-radius;
-      }
-
-      &--scrubline {
-        height: 1px;
-        background-color: $BrainFlix-black;
-        width: 110px;
-        display: inline-block;
-
-        @include tablet {
-          width: 400px;
-        }
-        @include desktop {
-          width: 800px;
-        }
-
-        &--scrublines {
-          color: white;
-        }
-      }
+    
+     
     }
 
     &__title {

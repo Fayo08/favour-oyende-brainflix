@@ -1,14 +1,12 @@
-import React from 'react';
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import './VideoItem.scss'
-
+import "./VideoItem.scss";
 
 function VideoItem({ title, video, channel, image, videoId }) {
-
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleVideoClick = () => {
-    navigate(`/videos/${videoId}`); 
+    navigate(`/videos/${videoId}`);
   };
 
   return (
