@@ -14,7 +14,7 @@ function HeroDetails({ mainVideo }) {
       <h2 className="mainvideo__title"> {title} </h2>
       <div className="mainvideo__content">
         <div className="mainvideo__content1">
-          <h3 className="mainvideo__channel"> by {channel} </h3>
+          <h3 className="mainvideo__channel"> By {channel} </h3>
           <p className="mainvideo__timestamp"> {newTimestamp} </p>
         </div>
         <div className="mainvideo__content2">

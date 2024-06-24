@@ -99,6 +99,15 @@
     width: 36px;
     height: 36px;
     border-radius: 50%;
+    
+    @include tablet {
+      width: 40px;
+      height: 40px;
+    }
+    @include tablet {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &__upload {

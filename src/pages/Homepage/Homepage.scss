@@ -7,26 +7,27 @@ main {
 margin: 0;
 padding: 0 $Padding-between-components-m 0 $Padding-between-components-m;
 }
-.aside {
+.sidebar {
   @include desktop {
     display: block;
-    width: 300px;
+    width: 30vw;
     padding: 20px;
-    background-color: #f4f4f4;
-    border-left: 1px solid #ddd;
+    border-left: 1px solid $Mercury;
   }
 }
 
 .Padding_homepage {
   @include desktop {
-    padding: $Padding-before-headlines;
+   
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
 .hero-comments-container {
   @include desktop {
-    width: 60%;
+    width: 70vw;
+    padding: 0 $Padding-between-components-m;
   }
 }
