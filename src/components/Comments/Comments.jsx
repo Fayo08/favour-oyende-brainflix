@@ -7,7 +7,7 @@ import CommentItem from "../Comment Item/CommentItem";
 
 import "./Comments.scss";
 
-function Comments({mainVideo}) {
+function Comments({...mainVideo}) {
   
   const {comments} = mainVideo
 

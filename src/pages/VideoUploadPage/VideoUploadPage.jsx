@@ -2,7 +2,7 @@ import VideoThumbnail from "../../assets/Images/Upload-video-preview.jpg";
 import publishIcon from "../../assets/Icons/publish.svg";
 
 import "./VideoUploadpage.scss";
-function VideoUploadPage({handleSubmit, title}) {
+function VideoUploadPage({ handleInputChange, values, handleSubmit}) {
   return (
     <div className="video-upload-container">
       <h2 className="Upload_title">Upload Video</h2>
@@ -17,7 +17,7 @@ function VideoUploadPage({handleSubmit, title}) {
             className="img_upload"
           />
         </div>
-        <form action="" className="form">
+        <form action="" onSubmit={handleSubmit} className="form">
           <div className="form_group">
             <label className="label" htmlFor="title">
               TITLE YOUR VIDEO
@@ -26,7 +26,8 @@ function VideoUploadPage({handleSubmit, title}) {
               type="text"
               name="title"
               id="title"
-              value={title}
+              onChange={handleInputChange}
+              value={values.title}
               className="form_control_1"
               placeholder="Add a title to your video"
             />
@@ -38,17 +39,16 @@ function VideoUploadPage({handleSubmit, title}) {
             <input
               type="text"
               name="description"
-              value={title}
+              onChange={handleInputChange}
+              value={values.description}
               id="description"
               className="form_control_2"
               placeholder="Add a description to your video"
             />
           </div>
-        </form>
-      </div>
-      <div className="buttons">
-        <button onClick={handleSubmit} className="upload-button">
-    
+
+          <div className="buttons">
+        <button type="submit" className="upload-button">
           <span>
             <img
               className="publish-icon"
@@ -56,11 +56,16 @@ function VideoUploadPage({handleSubmit, title}) {
               alt="publish Icon"
             />
           </span>
-          PUBLISH
-        </button>
+          PUBLISH   </button>
+        </div>
+        </form>
+      </div>
+     
+    
+      
 
         <div className="Cancel_button">CANCEL</div>
-      </div>
+      
     </div>
   );
 }
