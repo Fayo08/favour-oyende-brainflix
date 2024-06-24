@@ -39,11 +39,11 @@
     height: 1.5625rem;
   }
 
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 4px;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: .25rem ;
 
     @include tablet {
       display: flex;
@@ -65,8 +65,8 @@
    
 
     &__control {
-      width: 204px;
-      height: 36px;
+      width: 9.375rem;
+      height: 2.25rem;
       border: 1px solid $Mercury;
       border-radius: $border-radius;
       padding: 0 $Padding-before-headlines ;
@@ -75,14 +75,14 @@
    
 
       @include tablet {
-        width: 240px;
-        height: 40px;
+        width: 15rem;
+        height: 2.5rem;
         background-color: $Alabaster;
       }
 
       @include desktop {
-        width: 240px;
-        height: 40px;
+        width: 15rem;
+        height: 2.5rem;
       }
     }
 
@@ -123,8 +123,8 @@
     font-weight: $text-weight-buttons-m;
 
     @include tablet {
-      padding-left: 32px;
-      padding-right: 32px;
+      padding-left: 2rem;
+      padding-right: 2rem;
       justify-content: left;
     }
 
@@ -133,7 +133,7 @@
     }
 
     &--icon {
-      margin-right: 70px;
+      margin-right: 4.375rem;
     }
   }
 

@@ -46,12 +46,12 @@ function VideoUploadPage({}) {
     }
   };
   return (
-    <div className="video-upload-container">
-      <h2 className="Upload_title">Upload Video</h2>
+    <div className="videoUpload">
+      <h1 className="videoUpload__title">Upload Video</h1>
 
-      <div className="borders">
-        <div>
-          <p className="Video_thumbnail">VIDEO THUMBNAIL</p>
+      <div className="videoUpload__borders">
+        <div className="" >
+          <p className="videoUpload__thumbnail">VIDEO THUMBNAIL</p>
 
           <img
             src={VideoThumbnail}
@@ -59,8 +59,8 @@ function VideoUploadPage({}) {
             className="img_upload"
           />
         </div>
-        <form action="" onSubmit={handleSubmit} className="form">
-          <div className="form_group">
+        <form action="" onSubmit={handleSubmit} className="videoUpload__form">
+          <div className="videoUpload__formgroup">
             <label className="label" htmlFor="title">
               TITLE YOUR VIDEO
             </label>
@@ -70,11 +70,11 @@ function VideoUploadPage({}) {
               id="title"
               onChange={handleInputChange}
               value={values.title}
-              className="form_control_1"
+              className="videoUpload__form_control_1"
               placeholder="Add a title to your video"
             />
           </div>
-          <div className="form_group">
+          <div className="videoUpload__formgroup">
             <label className="label" htmlFor="desc">
               ADD A VIDEO DESCRIPTION
             </label>
@@ -84,13 +84,14 @@ function VideoUploadPage({}) {
               onChange={handleInputChange}
               value={values.description}
               id="description"
-              className="form_control_2"
+              className="videoUpload__form_control_2"
               placeholder="Add a description to your video"
             />
           </div>
 
-          <div className="buttons">
-            <button type="submit" className="upload-button">
+          <div className="videoUpload__buttons">
+
+            <button type="submit" className="videoUpload__button">
               <span>
                 <img
                   className="publish-icon"
@@ -100,11 +101,12 @@ function VideoUploadPage({}) {
               </span>
               PUBLISH{" "}
             </button>
+      <div className="Cancel_button">CANCEL</div>
+
           </div>
         </form>
       </div>
 
-      <div className="Cancel_button">CANCEL</div>
     </div>
   );
 }

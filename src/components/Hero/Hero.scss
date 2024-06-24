@@ -11,38 +11,8 @@
     width: 100%;
   }
 
-    &--controlContainer {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      position: absolute;
-      position: absolute;
-      top: 8rem;
-      left: 0.2rem;
-      gap: 0.5rem;
-
-      @include tablet {
-        bottom: -14rem;
-        left: 2rem;
-        gap: 3rem;
-      }
-      @include desktop {
-        bottom: -21rem;
-        gap: 2rem;
-        right: 3rem;
-      }
-    }
-
-    &--controls {
-      background-color: $BandSite-Darkblack-overlay;
-      width: fit-content;
-      display: flex;
-      padding: 6px;
-      border-radius: $border-radius;
-
     
-     
-    }
+
 
     &__title {
       font-weight: 800;
