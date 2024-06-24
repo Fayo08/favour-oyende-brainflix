@@ -1,6 +1,5 @@
 import React from "react";
-
-import Hero from "../../components/Hero/Hero";
+import MainVideo from "../../components/MainVideo/MainVideo";
 import HeroDetails from "../../components/HeroDetails/HeroDetails";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -8,6 +7,7 @@ import "./Homepage.scss";
 import axios from "axios";
 import Comments from "../../components/Comments/Comments";
 import VideoContainer from "../../components/VideoContainer/VideoContainer";
+
 
 function Homepage({}) {
   const API_URL = "http://localhost:8080";
@@ -50,7 +50,7 @@ function Homepage({}) {
   return (
     <main className="main">
       
-      <Hero mainVideo={mainVideo} />
+      <MainVideo mainVideo={mainVideo} />
       <div className="Padding_homepage">
         <div className="hero-comments-container">
           <HeroDetails mainVideo={mainVideo} />

@@ -1,17 +1,13 @@
 import playIcon from "../../assets/Logo/BrainFlix-logo.svg";
 import uploadIcon from "../../assets/Icons/upload.svg";
 import avatar from "../../assets/Images/Mohan-muruge.jpg";
-import { Link, useNavigate } from "react-router-dom";
-import searchIcon from "../../assets/Icons/search.svg";
+import { Link } from "react-router-dom";
+
 
 import "./Header.scss";
 
 const Header = () => {
-  const navigateTo = useNavigate();
-
-  const handleButtonClick = () => {
-    navigateTo("/upload");
-  };
+  
 
   return (
     <main className="Header">
@@ -34,13 +30,14 @@ const Header = () => {
             </label>
           </div>
         </form>
-
-      <button onClick={handleButtonClick} className="Header__upload">
+        <Link to="/upload">
+      <button  className="Header__upload">
             <span className="Header__upload--icon">
               <img src={uploadIcon} alt="upload icon" />
             </span>{" "}
             UPLOAD
           </button>
+          </Link>
           </div>
         <div className="Header__avatar--container">
           <img src={avatar} alt="Avatar" className="Header__avatar" />

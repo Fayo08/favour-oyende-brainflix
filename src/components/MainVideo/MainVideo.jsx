@@ -1,12 +1,11 @@
 
-import "./Hero.scss";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import "./MainVideo.scss";
+
 
 
 import React from "react";
 
-function Hero({mainVideo}) {
+function MainVideo({mainVideo}) {
 
 
   if (!mainVideo || mainVideo.length === 0) {
@@ -32,4 +31,4 @@ function Hero({mainVideo}) {
   );
 }
 
-export default Hero;
+export default MainVideo;

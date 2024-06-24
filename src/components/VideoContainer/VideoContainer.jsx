@@ -1,13 +1,8 @@
 import VideoItem from "../VideoItem/VideoItem";
-
-
 import "./VideoContainer.scss";
-
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function VideoContainer({ videoList, videoId }) {
-
-
   const filteredVideos = videoList.filter(
     (video) => video.id !== videoList[0]?.id
   );
@@ -19,15 +14,11 @@ function VideoContainer({ videoList, videoId }) {
   return (
     <>
       <main className="Next-videos-container">
-        <h3 className="article__subheader">NEXT VIDEOS</h3>
+        <h3 className="video_item__subheader">NEXT VIDEOS</h3>
         {filteredVideos.map((video) => (
-          <NavLink
-            key={video.id}
-            className="article"
-            to={`/videos/${video.id}`}
-          >
+          <Link key={video.id} className="video_item" to={`/videos/${video.id}`}>
             <VideoItem {...video} videoId={videoId} />
-          </NavLink>
+          </Link>
         ))}
       </main>
     </>

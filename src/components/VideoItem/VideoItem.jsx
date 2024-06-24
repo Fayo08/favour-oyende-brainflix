@@ -12,7 +12,7 @@ function VideoItem({ title, video, channel, image, videoId }) {
   return (
     < main>
     
-      <ul className="article__list"></ul>
+      <ul className="video__list_container">
 
       <li className="video" onClick={handleVideoClick}>
         <video className="video__thumbnail" poster={image} src={video}></video>
@@ -21,6 +21,7 @@ function VideoItem({ title, video, channel, image, videoId }) {
           <p className="video__name">{channel}</p>
         </div>
       </li>
+      </ul>
     </main>
   );
 }
