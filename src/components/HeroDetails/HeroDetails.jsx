@@ -4,7 +4,7 @@ import likesIcon from "../../assets/Icons/likes.svg";
 import React from "react";
 import "./HeroDetails.scss";
 
-function HeroDetails({...mainVideo}) {
+function HeroDetails({mainVideo}) {
  
   const { channel, timestamp, description, title, views, likes } = mainVideo;
   console.log (channel)
