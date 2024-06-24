@@ -6,10 +6,11 @@
   font-family: 'AvenirNextLTPro';
   font-weight: normal;
     font-style: normal;
+    
 }
 .app{
-
-  
+  margin: 0;
+padding: 0;
   @include desktop{
     padding: $Padding-between-components 
 }

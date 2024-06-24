@@ -4,9 +4,9 @@ import likesIcon from "../../assets/Icons/likes.svg";
 import React from "react";
 import "./HeroDetails.scss";
 
-function HeroDetails({mainVideo}) {
- 
+function HeroDetails({ mainVideo }) {
   const { channel, timestamp, description, title, views, likes } = mainVideo;
+  console.log(channel);
 
   const newTimestamp = new Date(timestamp).toLocaleDateString();
   return (
@@ -19,17 +19,13 @@ function HeroDetails({mainVideo}) {
         </div>
         <div className="mainvideo__content2">
           <p className="mainvideo__contentInfo">
-            
             <span>
-             
               <img src={viewsIcon} alt="Views Icon" />
             </span>
             {views}
           </p>
           <p className="mainvideo__contentInfo">
-         
             <span>
-           
               <img src={likesIcon} alt="likes Icon" />
             </span>
             {likes}

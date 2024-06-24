@@ -5,17 +5,22 @@
 .articles {
   margin-top: $Padding-between-components-m;
   margin-bottom: $Padding-between-components-m;
-  padding: 0 $Padding-after-headlines-m 0 $Padding-after-headlines-m;
-
+ 
 
   &__avatar {
     width: 36px;
     height: 36px;
     border-radius: 50%;
+
+    @include tablet {
+      width: 40px;
+      height: 40px;
+    }
   }
   &__content {
     display: flex;
-    gap: $Padding-between-components-m;
+    gap: 1rem;
+   
   }
 
   &__separate {
@@ -77,12 +82,14 @@
       padding: 0 2rem 0 2rem;
       border-radius: 4px;
       font-weight: $text-weight-buttons;
+      justify-content: center;
     }
     @include desktop {
       height: 40px;
       width: 150px;
       padding: 2rem;
       font-weight: $text-weight-buttons;
+      justify-content: center;
     }
   }
 
@@ -131,5 +138,3 @@
     margin-right: $Padding-after-headlines-m;
   }
 }
-
-

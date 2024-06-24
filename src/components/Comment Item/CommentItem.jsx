@@ -8,13 +8,14 @@ function CommentItem(props) {
   return (
     <>
       <div className="comment">
-        <div className="comment__placeholderImg"></div>
+        <div className="comment__placeholder"> <div className="comment__placeholderImg"></div></div>
         <div className="comment__info">
           <div className="comment__info--details">
             <h3 className="comment__title"> {name} </h3>
-            <p className="comment__date">{newTimestamp} </p>
+            <p className="comment__content"> {comment} </p>
+            
           </div>
-          <p className="comment__content"> {comment} </p>
+          <p className="comment__date">{newTimestamp} </p>
         </div>
       </div>
     </>

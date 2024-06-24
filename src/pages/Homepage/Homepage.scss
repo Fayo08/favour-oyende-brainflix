@@ -2,10 +2,10 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
-
-
-main{
+main {
   box-sizing: border-box;
+margin: 0;
+padding: 0 $Padding-between-components-m 0 $Padding-between-components-m;
 }
 .aside {
   @include desktop {
