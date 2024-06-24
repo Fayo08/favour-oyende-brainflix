@@ -6,7 +6,7 @@ import "./VideoContainer.scss";
 import { NavLink } from "react-router-dom";
 
 function VideoContainer({ videoList, videoId }) {
-  console.log(videoList);
+
 
   const filteredVideos = videoList.filter(
     (video) => video.id !== videoList[0]?.id

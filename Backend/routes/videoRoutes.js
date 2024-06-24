@@ -42,7 +42,7 @@ router.post("/", (req, res) => {
       image: req.body.image
     };
   
-    console.log(req.body);
+   
     const videos = readData();
   
   

@@ -35,8 +35,8 @@ function VideoUploadPage({}) {
       });
       setValues({ title: "", description: "" });
 
-      console.log(API_URL + "/videos");
-      console.log(e.target.name.value);
+     
+  
 
       await fetchVideos();
 

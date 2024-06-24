@@ -18,5 +18,5 @@ app.get('/', (req, res) => {
 app.use('/videos', videoRoutes);
 
 app.listen(PORT, () => {
-    console.log('App is running on port ', PORT);
+    
 })

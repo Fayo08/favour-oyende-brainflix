@@ -6,7 +6,7 @@ import "./HeroDetails.scss";
 
 function HeroDetails({ mainVideo }) {
   const { channel, timestamp, description, title, views, likes } = mainVideo;
-  console.log(channel);
+ 
 
   const newTimestamp = new Date(timestamp).toLocaleDateString();
   return (

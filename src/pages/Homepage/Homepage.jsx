@@ -26,7 +26,7 @@ function Homepage({}) {
   const fetchVideos = async () => {
     try {
       const response = await axios.get(`${API_URL}/videos`);
-      console.log(response.data[0]);
+     
       setVideoList(response.data);
       setmainVideo(response.data[0]);
     } catch (error) {
